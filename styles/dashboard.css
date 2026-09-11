@@ -142,6 +142,12 @@ a {
   overflow-y: auto;
 }
 
+.sidebar-divider {
+  height: 1px;
+  margin: 13px 10px;
+  background: #e5ecef;
+}
+
 .menu-title {
   padding: 0 12px 9px;
 
@@ -620,6 +626,79 @@ kbd {
 }
 
 /* =====================================================
+   ADD MEDICINE MODAL
+   ===================================================== */
+
+.modal-open { overflow: hidden; }
+
+.inventory-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(16, 42, 67, 0.45);
+}
+
+.inventory-modal-backdrop[hidden] { display: none; }
+
+.inventory-modal {
+  width: min(720px, 100%);
+  max-height: min(760px, calc(100vh - 40px));
+  overflow: auto;
+  border: 1px solid #dce5e9;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(16, 42, 67, 0.28);
+}
+
+.inventory-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 25px 17px;
+  border-bottom: 1px solid #e7edef;
+}
+
+.inventory-modal-header h2 { font-size: 21px; }
+.inventory-modal-header p { margin-top: 4px; color: var(--text); font-size: 14px; }
+
+.modal-close {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 8px;
+  background: #f0f4f5;
+  color: #526a7d;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.inventory-form { padding: 21px 25px 24px; }
+.inventory-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.inventory-form label { display: grid; gap: 7px; color: #405061; font-size: 13px; font-weight: 700; }
+.inventory-form input, .inventory-form select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #d5e0e5;
+  border-radius: 7px;
+  outline: 0;
+  padding: 0 11px;
+  color: var(--navy);
+  background: #fff;
+  font-size: 14px;
+}
+.inventory-form input:focus, .inventory-form select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(7, 155, 129, .12); }
+.form-span-two { grid-column: span 2; }
+.inventory-form-message { margin-top: 14px; color: #d84d48; font-size: 13px; }
+.inventory-modal-footer { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+.inventory-modal-footer .primary-button { padding: 11px 17px; }
+.modal-cancel { border: 1px solid #d5e0e5; border-radius: 8px; padding: 11px 17px; background: #fff; color: #536b82; cursor: pointer; font-weight: 700; }
+
+/* =====================================================
    STAT CARDS
    ===================================================== */
 
@@ -924,7 +1003,7 @@ kbd {
    ===================================================== */
 
 .quick-actions {
-  padding: 0 14px 12px;
+  padding: 0 14px 5px;
 }
 
 .quick-actions a {
@@ -997,13 +1076,13 @@ kbd {
 }
 
 .quick-actions strong {
-  font-size: 9px;
+  font-size: 14px;
 }
 
 .quick-actions small {
   color: var(--muted);
 
-  font-size: 7px;
+  font-size: 12px;
 
   margin-top: 3px;
 }
@@ -1323,6 +1402,13 @@ footer {
   .primary-button {
     width: 100%;
   }
+
+  .inventory-modal-backdrop { padding: 12px; }
+  .inventory-modal-header, .inventory-form { padding-left: 17px; padding-right: 17px; }
+  .inventory-form-grid { grid-template-columns: 1fr; }
+  .form-span-two { grid-column: auto; }
+  .inventory-modal-footer { flex-direction: column-reverse; }
+  .inventory-modal-footer button { width: 100%; }
 
   .stats {
     grid-template-columns: 1fr 1fr;

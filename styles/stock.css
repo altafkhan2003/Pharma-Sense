@@ -1,0 +1,86 @@
+.sidebar-divider {
+  height: 1px;
+  margin: 13px 10px;
+  background: #e5ecef;
+}
+
+.stock-main { min-height: 100vh; }
+.stock-topbar { justify-content: flex-end; }
+.stock-top-actions { display: flex; align-items: center; gap: 20px; }
+.stock-global-search { width: min(310px, 31vw); height: 38px; }
+.stock-content { max-width: 1450px; margin: 0 auto; padding: 25px 30px 12px; }
+
+.stock-heading, .stock-heading-copy, .stock-toolbar, .stock-table-actions, .stock-table-footer, .pagination {
+  display: flex;
+  align-items: center;
+}
+.stock-heading { justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.stock-heading-copy { gap: 14px; }
+.stock-page-icon {
+  width: 46px; height: 46px; display: grid; place-items: center; border: 2px solid var(--primary);
+  border-radius: 12px; color: var(--primary); font-size: 27px;
+}
+.stock-heading h1 { font-size: clamp(24px, 2.5vw, 31px); letter-spacing: -1px; }
+.stock-heading p { margin-top: 3px; color: var(--text); font-size: 14px; }
+.stock-add-button {
+  border: 0; border-radius: 8px; padding: 12px 18px; background: var(--primary); color: #fff;
+  font-size: 14px; font-weight: 700; box-shadow: 0 7px 17px rgba(7, 155, 129, .18); cursor: pointer;
+}
+.stock-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 17px; }
+.stock-summary-card {
+  display: flex; align-items: center; gap: 13px; min-height: 106px; padding: 17px; border: 1px solid #e5ebee;
+  border-radius: 9px; background: #fff; box-shadow: 0 3px 10px rgba(16, 42, 67, .025);
+}
+.summary-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; font-size: 19px; font-weight: 700; }
+.summary-icon.green { color: #078a75; background: #e2f7f1; }
+.summary-icon.teal { color: #079b81; background: #dcf5ef; }
+.summary-icon.orange { color: #f08422; background: #fff0e3; }
+.summary-icon.slate { color: #536b82; background: #ecf0f2; }
+.stock-summary-card p { color: var(--muted); font-size: 12px; }
+.stock-summary-card strong { display: block; margin: 3px 0 1px; color: #136d63; font-size: 23px; line-height: 1; }
+.stock-summary-card strong.danger { color: #ed5848; }.stock-summary-card strong.warning { color: #f08124; }
+.stock-summary-card small { color: #778796; font-size: 11px; }
+
+.stock-table-card { overflow: hidden; border: 1px solid #e4ebee; border-radius: 9px; background: #fff; box-shadow: 0 3px 12px rgba(16, 42, 67, .025); }
+.stock-toolbar { justify-content: space-between; gap: 15px; padding: 13px; border-bottom: 1px solid #e7edef; }
+.stock-tabs { display: flex; gap: 7px; }
+.stock-tab, .filter-button, .pagination button, .row-action {
+  border: 1px solid transparent; background: transparent; color: #607386; cursor: pointer;
+}
+.stock-tab { padding: 9px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; }
+.stock-tab.active { background: var(--primary); color: #fff; box-shadow: 0 4px 9px rgba(7, 155, 129, .17); }
+.stock-table-actions { gap: 10px; }
+.stock-search { height: 35px; width: min(265px, 22vw); display: flex; align-items: center; gap: 7px; padding: 0 10px; border: 1px solid #dce5e9; border-radius: 6px; color: #8191a0; }
+.stock-search input { min-width: 0; width: 100%; border: 0; outline: 0; color: var(--navy); font-size: 12px; }
+.stock-search input::placeholder { color: #9aa9b4; }
+.filter-button { padding: 9px 12px; border-color: #dce5e9; border-radius: 6px; font-size: 12px; white-space: nowrap; }
+.stock-table-wrap { overflow-x: auto; }
+.stock-table-card table { width: 100%; min-width: 900px; border-collapse: collapse; }
+.stock-table-card th { padding: 12px 14px; background: #f4f8f9; color: #5f7486; font-size: 11px; font-weight: 700; text-align: left; }
+.stock-table-card td { padding: 10px 14px; border-bottom: 1px solid #edf1f3; color: #526a7d; font-size: 12px; white-space: nowrap; }
+.stock-table-card tr:last-child td { border-bottom: 0; }
+.stock-table-card td:first-child { color: #395266; font-weight: 600; }
+.medicine-dot { display: inline-block; width: 12px; height: 12px; margin-right: 9px; border-radius: 50% 50% 45% 45%; vertical-align: -1px; box-shadow: inset -3px -2px 0 rgba(0,0,0,.14); }
+.medicine-dot.green { background: #39b696; }.medicine-dot.blue { background: #5598df; }.medicine-dot.pink { background: #ec6b9b; }.medicine-dot.yellow { background: #f5bd4c; }.medicine-dot.red { background: #ef7359; }
+.stock-status { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 12px; font-size: 10px; font-weight: 700; }
+.stock-status.in-stock { color: #0b9279; background: #e2f8f1; }.stock-status.expiring { color: #e38a1f; background: #fff4dc; }.stock-status.low-stock { color: #d8871d; background: #fff3dc; }.stock-status.out-stock { color: #e85555; background: #ffe6e8; }
+.row-action { font-size: 15px; }.row-action:hover { color: var(--primary); }
+.stock-table-footer { justify-content: space-between; padding: 12px 14px; border-top: 1px solid #e7edef; color: #778895; font-size: 11px; }
+.pagination { gap: 5px; }.pagination button { width: 25px; height: 25px; border: 1px solid #e2e9ec; border-radius: 5px; font-size: 11px; }.pagination .current { border-color: var(--primary); background: var(--primary); color: #fff; }.pagination button:disabled { color: #b7c1c8; }
+.stock-footer { padding: 15px 0 0; color: #71828e; font-size: 11px; }.stock-footer span { padding: 0 8px; color: var(--primary); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (max-width: 1100px) {
+  .stock-summary { grid-template-columns: repeat(2, 1fr); }
+  .stock-toolbar { align-items: flex-start; flex-direction: column; }
+  .stock-table-actions { width: 100%; }.stock-search { width: 100%; }
+}
+@media (max-width: 650px) {
+  .stock-content { padding: 20px 14px 12px; }
+  .stock-topbar { justify-content: space-between; }.stock-global-search { width: 40px; }
+  .stock-heading { align-items: flex-start; flex-direction: column; }.stock-add-button { width: 100%; }
+  .stock-summary { grid-template-columns: 1fr 1fr; gap: 9px; }.stock-summary-card { min-height: 92px; padding: 12px; gap: 8px; }.summary-icon { width: 31px; height: 31px; }.stock-summary-card strong { font-size: 19px; }
+  .stock-tabs { max-width: 100%; overflow-x: auto; padding-bottom: 2px; }.stock-tab { padding: 8px 10px; }
+  .stock-table-actions { flex-direction: column; align-items: stretch; }.filter-button { width: 100%; }
+  .stock-table-footer { align-items: flex-start; flex-direction: column; gap: 10px; }
+}

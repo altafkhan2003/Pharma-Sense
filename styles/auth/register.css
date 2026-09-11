@@ -140,8 +140,7 @@ body {
   padding: 5px 3px;
   gap: 10px;
   border-radius: var(--radius-input);
-  transition: border-color 0.25s ease,
-    box-shadow 0.25s ease,;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
    
 }
 .Owner-name:hover{
@@ -202,6 +201,13 @@ body {
   height: 30px;
   width: 30px;
 }
+.password-toggle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+}
+.form-message { color: var(--danger); font-size: 0.9rem; padding: 0 20px; }
 .button {
   width: 95%;
   /* margin: auto; */

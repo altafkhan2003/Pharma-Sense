@@ -62,7 +62,7 @@ h4 {
   font-family: var(--font-family);
 }
 body {
-  background-image: url(image/Background.png);
+  background-image: url(../assets/images/landing/Background.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

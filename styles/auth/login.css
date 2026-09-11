@@ -40,6 +40,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 .box {
   width: 40%;
@@ -198,3 +199,23 @@ body {
   transform: scale(1.15);
   filter: drop-shadow(0 0 3px rgba(13, 143, 116, 0.3));
 }
+.password-toggle {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+}
+.submit-button {
+  width: 80%;
+  border: 0;
+  border-radius: var(--radius-button);
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px;
+}
+.submit-button:hover { background: var(--primary-hover); }
+.form-message { width: 80%; color: var(--danger); font-size: 0.9rem; }
+.form-message[data-kind="success"] { color: var(--primary-dark); }

@@ -7,18 +7,18 @@
     <title>Pharma Sense - Dashboard</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="Dashboard.css" />
+    <link rel="stylesheet" href="../../styles/dashboard.css" />
   </head>
 
-  <body>
+  <body data-page="dashboard" data-active-nav="dashboard">
     <div class="app">
       <!-- ================= SIDEBAR ================= -->
-      <aside class="sidebar">
+      <aside class="sidebar" data-sidebar>
         <!-- Logo -->
         <div class="brand">
           
           <span>
-            <img src="../pharma_sense_assets/logo_pharma_sense.png" alt="">
+            <img src="../../assets/images/core/logo_pharma_sense.png" alt="">
 
           </span>
           <div>
@@ -107,10 +107,10 @@
           </div>
 
           <div class="admin-profile">
-            <div class="avatar">AK</div>
+            <div class="avatar" data-user-initials>AK</div>
 
             <div>
-              <strong>Admin User</strong>
+              <strong data-user-name>Admin User</strong>
               <small>Administrator</small>
             </div>
 
@@ -149,10 +149,10 @@
 
             <!-- Profile -->
             <div class="top-profile">
-              <div class="avatar">AK</div>
+              <div class="avatar" data-user-initials>AK</div>
 
               <div class="profile-text">
-                <strong>Altaf Khan</strong>
+                <strong data-user-name>Altaf Khan</strong>
                 <small>Administrator</small>
               </div>
 
@@ -170,12 +170,12 @@
             <div>
               <span class="date"> THURSDAY, SEPTEMBER 10, 2026 </span>
 
-              <h1>Good evening, Altaf 👋</h1>
+              <h1>Good evening, <span data-user-first-name>Altaf</span> 👋</h1>
 
               <p>Here's your pharmacy overview for today.</p>
             </div>
 
-            <button class="primary-button">＋ Add Medicine</button>
+            <button class="primary-button" type="button" data-open-inventory-modal>＋ Add Medicine</button>
           </div>
 
           <!-- ================= STAT CARDS ================= -->
@@ -369,7 +369,7 @@
               </div>
 
               <div class="quick-actions">
-                <a href="#">
+                <a href="#" data-open-inventory-modal>
                   <span class="quick-icon green"> ＋ </span>
 
                   <div>
@@ -533,7 +533,7 @@
                   <p>Medicines expiring soon</p>
                 </div>
 
-                <a href="#" class="view-all"> View All → </a>
+                <a href="expiry.html" class="view-all"> View All → </a>
               </div>
 
               <div class="expiry-list">
@@ -597,6 +597,8 @@
       </main>
     </div>
 
+    <script src="../../scripts/sidebar.js"></script>
+
     <!-- Mobile sidebar -->
     <script>
       const menuButton = document.querySelector(".mobile-menu");
@@ -606,5 +608,7 @@
         sidebar.classList.toggle("show");
       });
     </script>
+    <script src="../../scripts/auth.js"></script>
+    <script src="../../scripts/inventory.js"></script>
   </body>
 </html>
