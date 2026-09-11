@@ -1,0 +1,60 @@
+:root {
+  /* Main palette sampled from the reference */
+  --primary: #0D836B;
+  --primary-hover: #0B755F;
+  --primary-soft: #E8F6F2;
+  --primary-light: #BFE8DE;
+
+  --text: #2C3447;
+  --text-muted: #7A808B;
+  --text-subtle: #A4A6AD;
+
+  --page-bg: #F8F8F8;
+  --card-bg: #FFFFFF;
+  --input-bg: #FFFFFF;
+  --border: #E6E7EA;
+  --border-strong: #D8DADF;
+
+  --danger: #E0525D;
+  --white: #FFFFFF;
+
+  /* Layout */
+  --card-width: 360px;
+  --radius-card: 12px;
+  --radius-input: 6px;
+  --radius-button: 6px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  /* Shadows */
+  --shadow-card: 0 5px 20px rgba(30, 40, 50, 0.08);
+
+  /* Typography */
+  --font-family: Inter, "Segoe UI", Arial, sans-serif;
+  --font-size-label: 12px;
+  --font-size-body: 13px;
+  --font-size-title: 20px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: var(--font-family);
+}
+
+.card {
+  width: var(--card-width);
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}

@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* Brand & Accent Colors */
+  --color-primary: #009b79; /* Main turquoise/teal green */
+  --color-primary-hover: #008f70; /* Darker green for button hovers */
+  --color-primary-light: #ddf7f1; /* Light teal background (active nav item) */
+  --color-secondary-accent: #00bf8f; /* Bright accent green for highlights */
+
+  /* Text & Typography Colors */
+  --color-text-main: #1a202c; /* Dark heading color */
+  --color-text-muted: #444f63; /* Muted secondary body text */
+  --color-text-light: #90a3bf; /* Light placeholder / footer text */
+
+  /* Neutral Backgrounds */
+  --bg-page: #f4f7f6; /* Main app background */
+  --bg-card: #ffffff; /* Card & panel background */
+  --bg-input: #f8fafc; /* Search input background */
+
+  /* Borders & Dividers */
+  --border-color-light: #c2cbd8; /* Light card outline */
+  --border-color-muted: #cbd5e1; /* Input borders */
+
+  /* Fonts & Weights */
+  --font-family: "Inter", system-ui, -apple-system, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing System */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Border Radii */
+  --radius-sm: 8px; /* Buttons & small inputs */
+  --radius-md: 12px; /* Cards & navigation items */
+  --radius-lg: 20px; /* Large main container panels */
+  --radius-full: 9999px; /* Badges & pill elements */
+
+  /* Elevation / Shadows */
+  --shadow-sm: 0 2px 7px rgba(100, 207, 132, 0.644);
+  --shadow-md: 0 4px 12px rgba(25, 165, 32, 0.459);
+  --shadow-lg: 0 10px 25px rgb(2, 163, 24);
+}
+p {
+  color: var(--color-text-muted);
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-text-main);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+body {
+  background-image: url(image/Background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* Hedaer section */
+header {
+  display: flex;
+  align-items: center;
+  /* width: 25%; */
+  gap: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+  padding: 5px 40px;
+
+  outline: none;
+}
+
+header img {
+  width: 60px;
+}
+/* main Section */
+main {
+  margin-top: 10px;
+  padding: 5px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.upper {
+  padding: 0px 8px;
+  /* border: 1px solid salmon; */
+}
+.left {
+  width: 40%;
+  /* border: 1px solid red; */
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+/* upper section in side left */
+#complete {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  margin: 10px 0;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-primary-light);
+  width: 80%;
+}
+#complete p {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+.Manage {
+  margin: 20px 0px;
+}
+.Manage h1 {
+  font-size: 2.5em;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2em;
+}
+#Business {
+  color: var(--color-secondary-accent);
+}
+.paragraph {
+  margin: 15px 0px;
+}
+.paragraph p {
+  font-size: 1.4em;
+}
+/* Button section */
+
+
+.button button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  background-color: var(--color-primary-hover);
+  outline: none;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
+}
+.button button:hover {
+  transform: translateY(-2px);
+  scale: 1.02;
+  background: #3943ce;
+  box-shadow:
+    0 8px 20px rgba(13, 110, 253, 0.3),
+    0 0 0 4px rgba(13, 110, 253, 0.08);
+}
+.button {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 25px 0px;
+}
+#login {
+  display: flex;
+  gap: 5px;
+}
+.button a {
+  color: white;
+  text-decoration: none;
+}
+#Register {
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 8px 30px;
+  
+
+}
+
+/* lower section inside left */
+
+
+.lower {
+  padding: 0px 8px;
+}
+.lower h3 {
+  margin: 5px 0;
+}
+.group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.modules {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+.group div {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  line-height: 1em;
+}
+
+/* right section */
+.right {
+  /* padding: 10px; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Smooth transition */
+  transition: all 0.2s ease;
+}
+.right:hover {
+  transform: translateY(-6px);
+
+  /* Stronger shadow on hover */
+  box-shadow: 0px 12px 10px rgba(191, 84, 224, 0.479);
+}
+
+.right img {
+  width: 100%;
+  height: 600px;
+  object-fit: fill;
+  object-position: center;
+}
+
+/* footer section */
+footer {
+  /* border: 1px solid red; */
+  width: 50%;
+  margin-top: 10px;
+}
+.footer {
+  padding: 10px 40px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer-list {
+  padding: 0px 8px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 0 10px;
+}
+.footer-list li {
+  padding: 0 10px;
+}

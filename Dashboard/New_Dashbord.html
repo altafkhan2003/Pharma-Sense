@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pharma Sense Pharmacy Management Dashboard" />
+  <title>Pharma Sense — Dashboard</title>
+
+  <!-- Lucide icons -->
+ 
+  <link rel="stylesheet" href="New_Dashbord.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Mobile overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <i data-lucide="pill"></i>
+        </div>
+        <div>
+          <h1>Pharma Sense</h1>
+          <span>Pharmacy Management System</span>
+        </div>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <nav class="main-nav">
+        <a class="nav-item active" href="#">
+          <i data-lucide="house"></i><span>Dashboard</span>
+        </a>
+        <a class="nav-item" href="#">
+          <i data-lucide="package"></i><span>Stock Management</span>
+        </a>
+        <a class="nav-item" href="#">
+          <i data-lucide="bell"></i><span>Expiry Alerts</span>
+        </a>
+        <a class="nav-item" href="#">
+          <i data-lucide="file-text"></i><span>Sales &amp; Invoicing</span>
+        </a>
+        <a class="nav-item" href="#">
+          <i data-lucide="shopping-cart"></i><span>Order Management</span>
+        </a>
+
+        <div class="nav-divider"></div>
+
+        <a class="nav-item" href="#">
+          <i data-lucide="chart-column"></i><span>Reports</span>
+        </a>
+        <a class="nav-item" href="#">
+          <i data-lucide="users"></i><span>Suppliers</span>
+        </a>
+        <a class="nav-item" href="#">
+          <i data-lucide="settings"></i><span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a class="nav-item logout" href="#">
+          <i data-lucide="log-out"></i><span>Log out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main area -->
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <div class="topbar-spacer"></div>
+
+        <div class="search-box">
+          <i data-lucide="search"></i>
+          <input type="text" placeholder="Search medicines, orders, suppliers..." />
+        </div>
+
+        <button class="profile-btn" aria-label="Profile">
+          <i data-lucide="user-round"></i>
+        </button>
+
+        <button class="user-name">
+          <span>Aaryan Prashant Tare</span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+      </header>
+
+      <section class="dashboard">
+
+        <!-- Welcome row -->
+        <div class="welcome-row">
+          <div>
+            <p class="eyebrow">Good Morning,</p>
+            <h2>Welcome back, Aaryan!</h2>
+            <p class="subtitle">Here's what's happening with your pharmacy today.</p>
+          </div>
+
+          <button class="date-picker">
+            <i data-lucide="calendar-days"></i>
+            <span>Mon, 11 Aug 2025</span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+        </div>
+
+        <!-- Stat cards -->
+        <div class="stats-grid">
+
+          <article class="stat-card">
+            <div class="stat-icon teal"><i data-lucide="package-check"></i></div>
+            <div class="stat-info">
+              <p>Total Stock Items</p>
+              <h3>1,524</h3>
+              <span>Items in stock</span>
+            </div>
+            <div class="stat-change up"><i data-lucide="trending-up"></i> +12</div>
+            <small>vs last week</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon red"><i data-lucide="triangle-alert"></i></div>
+            <div class="stat-info">
+              <p>Low Stock Items</p>
+              <h3>18</h3>
+              <span>Need attention</span>
+            </div>
+            <div class="stat-change danger"><i data-lucide="trending-up"></i> +5</div>
+            <small>vs last week</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon teal"><i data-lucide="calendar-days"></i></div>
+            <div class="stat-info">
+              <p>Today's Sales</p>
+              <h3>₹24,680</h3>
+              <span>Total sales</span>
+            </div>
+            <div class="stat-change up"><i data-lucide="trending-up"></i> +8%</div>
+            <small>vs yesterday</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon amber"><i data-lucide="hourglass"></i></div>
+            <div class="stat-info">
+              <p>Expiring Soon</p>
+              <h3>32</h3>
+              <span>In next 30 days</span>
+            </div>
+            <div class="stat-change amber-text"><i data-lucide="trending-up"></i> +6</div>
+            <small>vs last week</small>
+          </article>
+
+        </div>
+
+        <!-- Lower dashboard -->
+        <div class="dashboard-grid">
+
+          <!-- Sales overview -->
+          <section class="panel sales-panel">
+            <div class="panel-header">
+              <h3>Sales Overview</h3>
+              <button class="select-btn">This Week <i data-lucide="chevron-down"></i></button>
+            </div>
+
+            <div class="chart-wrap">
+              <div class="y-labels">
+                <span>₹40K</span>
+                <span>₹30K</span>
+                <span>₹20K</span>
+                <span>₹10K</span>
+                <span>₹0</span>
+              </div>
+
+              <svg class="sales-chart" viewBox="0 0 760 300" preserveAspectRatio="none" aria-label="Weekly sales chart">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#10a58d" stop-opacity=".22"/>
+                    <stop offset="100%" stop-color="#10a58d" stop-opacity=".03"/>
+                  </linearGradient>
+                </defs>
+
+                <g class="grid-lines">
+                  <line x1="0" y1="20" x2="760" y2="20"/>
+                  <line x1="0" y1="82" x2="760" y2="82"/>
+                  <line x1="0" y1="144" x2="760" y2="144"/>
+                  <line x1="0" y1="206" x2="760" y2="206"/>
+                  <line x1="0" y1="268" x2="760" y2="268"/>
+                </g>
+
+                <path class="area"
+                  d="M20 232
+                     C60 210, 80 220, 140 212
+                     C190 205, 205 152, 270 155
+                     C310 156, 328 187, 365 172
+                     C410 155, 422 90, 470 93
+                     C520 96, 548 164, 585 151
+                     C635 133, 675 82, 735 47
+                     L735 268 L20 268 Z"/>
+
+                <path class="line"
+                  d="M20 232
+                     C60 210, 80 220, 140 212
+                     C190 205, 205 152, 270 155
+                     C310 156, 328 187, 365 172
+                     C410 155, 422 90, 470 93
+                     C520 96, 548 164, 585 151
+                     C635 133, 675 82, 735 47"/>
+
+                <g class="points">
+                  <circle cx="20" cy="232" r="5"/>
+                  <circle cx="140" cy="212" r="5"/>
+                  <circle cx="270" cy="155" r="5"/>
+                  <circle cx="365" cy="172" r="5"/>
+                  <circle cx="470" cy="93" r="5"/>
+                  <circle cx="585" cy="151" r="5"/>
+                  <circle cx="735" cy="47" r="5"/>
+                </g>
+              </svg>
+
+              <div class="x-labels">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span>
+                <span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Top selling -->
+          <section class="panel">
+            <div class="panel-header">
+              <h3>Top Selling Medicines</h3>
+              <a href="#">View All</a>
+            </div>
+
+            <div class="medicine-list">
+              <div class="medicine-item">
+                <span class="pill blue-green"></span><span>Paracetamol</span><strong>1,250</strong>
+              </div>
+              <div class="medicine-item">
+                <span class="pill blue"></span><span>Amoxicillin</span><strong>985</strong>
+              </div>
+              <div class="medicine-item">
+                <span class="pill white"></span><span>Cetirizine</span><strong>780</strong>
+              </div>
+              <div class="medicine-item">
+                <span class="pill pink"></span><span>Pantoprazole</span><strong>650</strong>
+              </div>
+              <div class="medicine-item">
+                <span class="pill yellow"></span><span>Azithromycin</span><strong>540</strong>
+              </div>
+            </div>
+          </section>
+
+          <!-- Recent activity -->
+          <section class="panel activity-panel">
+            <div class="panel-header">
+              <h3>Recent Activity</h3>
+              <a href="#">View All</a>
+            </div>
+
+            <div class="activity-list">
+              <div class="activity">
+                <span class="activity-icon green"><i data-lucide="shopping-cart"></i></span>
+                <div><b>Sale completed</b><p>Bill #S2587 · ₹820</p></div>
+                <time>10:24 AM</time>
+              </div>
+              <div class="activity">
+                <span class="activity-icon blue"><i data-lucide="package-plus"></i></span>
+                <div><b>New stock added</b><p>Paracetamol 500mg (100 tabs)</p></div>
+                <time>09:50 AM</time>
+              </div>
+              <div class="activity">
+                <span class="activity-icon orange"><i data-lucide="triangle-alert"></i></span>
+                <div><b>Expiry alert</b><p>Amoxicillin 250mg (exp: 15 Aug)</p></div>
+                <time>09:32 AM</time>
+              </div>
+              <div class="activity">
+                <span class="activity-icon purple"><i data-lucide="package-check"></i></span>
+                <div><b>Order received</b><p>Supplier: MedPlus</p></div>
+                <time>08:15 AM</time>
+              </div>
+              <div class="activity">
+                <span class="activity-icon green"><i data-lucide="users"></i></span>
+                <div><b>New supplier added</b><p>HealthCare Pharma</p></div>
+                <time>Yesterday</time>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <footer class="footer">
+          <span>v1.0</span>
+          <span>•</span>
+          <span>Local Data Storage</span>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  
+</body>
+</html>
