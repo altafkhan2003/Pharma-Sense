@@ -2,24 +2,36 @@
 
 :root {
   /* Brand & Accent Colors */
-  --color-primary: #009b79; /* Main turquoise/teal green */
-  --color-primary-hover: #008f70; /* Darker green for button hovers */
-  --color-primary-light: #ddf7f1; /* Light teal background (active nav item) */
-  --color-secondary-accent: #00bf8f; /* Bright accent green for highlights */
+  --color-primary: #009b79;
+  /* Main turquoise/teal green */
+  --color-primary-hover: #008f70;
+  /* Darker green for button hovers */
+  --color-primary-light: #ddf7f1;
+  /* Light teal background (active nav item) */
+  --color-secondary-accent: #00bf8f;
+  /* Bright accent green for highlights */
 
   /* Text & Typography Colors */
-  --color-text-main: #1a202c; /* Dark heading color */
-  --color-text-muted: #444f63; /* Muted secondary body text */
-  --color-text-light: #90a3bf; /* Light placeholder / footer text */
+  --color-text-main: #1a202c;
+  /* Dark heading color */
+  --color-text-muted: #444f63;
+  /* Muted secondary body text */
+  --color-text-light: #90a3bf;
+  /* Light placeholder / footer text */
 
   /* Neutral Backgrounds */
-  --bg-page: #f4f7f6; /* Main app background */
-  --bg-card: #ffffff; /* Card & panel background */
-  --bg-input: #f8fafc; /* Search input background */
+  --bg-page: #f4f7f6;
+  /* Main app background */
+  --bg-card: #ffffff;
+  /* Card & panel background */
+  --bg-input: #f8fafc;
+  /* Search input background */
 
   /* Borders & Dividers */
-  --border-color-light: #c2cbd8; /* Light card outline */
-  --border-color-muted: #cbd5e1; /* Input borders */
+  --border-color-light: #c2cbd8;
+  /* Light card outline */
+  --border-color-muted: #cbd5e1;
+  /* Input borders */
 
   /* Fonts & Weights */
   --font-family: "Inter", system-ui, -apple-system, sans-serif;
@@ -36,37 +48,46 @@
   --space-xl: 32px;
 
   /* Border Radii */
-  --radius-sm: 8px; /* Buttons & small inputs */
-  --radius-md: 12px; /* Cards & navigation items */
-  --radius-lg: 20px; /* Large main container panels */
-  --radius-full: 9999px; /* Badges & pill elements */
+  --radius-sm: 8px;
+  /* Buttons & small inputs */
+  --radius-md: 12px;
+  /* Cards & navigation items */
+  --radius-lg: 20px;
+  /* Large main container panels */
+  --radius-full: 9999px;
+  /* Badges & pill elements */
 
   /* Elevation / Shadows */
   --shadow-sm: 0 2px 7px rgba(100, 207, 132, 0.644);
   --shadow-md: 0 4px 12px rgba(25, 165, 32, 0.459);
   --shadow-lg: 0 10px 25px rgb(2, 163, 24);
 }
+
 p {
   color: var(--color-text-muted);
 }
+
 h1,
 h2,
 h3,
 h4 {
   color: var(--color-text-main);
 }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
+
 body {
   background-image: url(../assets/images/landing/Background.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 /* Hedaer section */
 header {
   display: flex;
@@ -84,6 +105,7 @@ header {
 header img {
   width: 60px;
 }
+
 /* main Section */
 main {
   margin-top: 10px;
@@ -91,10 +113,12 @@ main {
   display: flex;
   justify-content: space-between;
 }
+
 .upper {
   padding: 0px 8px;
   /* border: 1px solid salmon; */
 }
+
 .left {
   width: 40%;
   /* border: 1px solid red; */
@@ -103,6 +127,7 @@ main {
   flex-direction: column;
   gap: 5px;
 }
+
 /* upper section in side left */
 #complete {
   display: flex;
@@ -113,28 +138,35 @@ main {
   background-color: var(--color-primary-light);
   width: 80%;
 }
+
 #complete p {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
 }
+
 .Manage {
   margin: 20px 0px;
 }
+
 .Manage h1 {
   font-size: 2.5em;
   text-transform: capitalize;
   font-weight: var(--font-weight-semibold);
   line-height: 1.2em;
 }
+
 #Business {
   color: var(--color-secondary-accent);
 }
+
 .paragraph {
   margin: 15px 0px;
 }
+
 .paragraph p {
   font-size: 1.4em;
 }
+
 /* Button section */
 
 
@@ -155,6 +187,7 @@ main {
   transition: all 0.2s ease;
   box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
 }
+
 .button button:hover {
   transform: translateY(-2px);
   scale: 1.02;
@@ -163,25 +196,29 @@ main {
     0 8px 20px rgba(13, 110, 253, 0.3),
     0 0 0 4px rgba(13, 110, 253, 0.08);
 }
+
 .button {
   display: flex;
   align-items: center;
   gap: 25px;
   margin: 25px 0px;
 }
+
 #login {
   display: flex;
   gap: 5px;
 }
+
 .button a {
   color: white;
   text-decoration: none;
 }
+
 #Register {
   font-size: 1.5em;
   font-weight: 400;
   padding: 8px 30px;
-  
+
 
 }
 
@@ -191,20 +228,24 @@ main {
 .lower {
   padding: 0px 8px;
 }
+
 .lower h3 {
   margin: 5px 0;
 }
+
 .group {
   display: flex;
   gap: 10px;
   align-items: center;
 }
+
 .modules {
   display: flex;
   flex-direction: column;
   gap: 5px;
   justify-content: center;
 }
+
 .group div {
   display: flex;
   flex-direction: column;
@@ -226,6 +267,7 @@ main {
   /* Smooth transition */
   transition: all 0.2s ease;
 }
+
 .right:hover {
   transform: translateY(-6px);
 
@@ -246,6 +288,7 @@ footer {
   width: 50%;
   margin-top: 10px;
 }
+
 .footer {
   padding: 10px 40px;
 
@@ -253,6 +296,7 @@ footer {
   gap: 10px;
   align-items: center;
 }
+
 .footer-list {
   padding: 0px 8px;
   display: flex;
@@ -260,6 +304,7 @@ footer {
   align-items: center;
   margin: 0 10px;
 }
+
 .footer-list li {
   padding: 0 10px;
 }

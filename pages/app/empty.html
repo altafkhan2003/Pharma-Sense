@@ -1,36 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pharma Sense module" />
-    <title>Pharma Sense</title>
-    <link rel="stylesheet" href="../../styles/dashboard.css" />
-    <link rel="stylesheet" href="../../styles/empty-state.css" />
-  </head>
-  <body data-page="dashboard">
-    <div class="app empty-app">
-      <aside class="sidebar" data-sidebar></aside>
-      <main class="main empty-main">
-        <header class="topbar empty-topbar">
-          <button class="mobile-menu" aria-label="Open menu">☰</button>
-          <div class="top-profile"><div class="avatar" data-user-initials>AK</div><div class="profile-text"><strong data-user-name>Altaf Khan</strong><small>Administrator</small></div></div>
-        </header>
-        <section class="empty-content" aria-labelledby="empty-title">
-          <div class="empty-heading"><div class="empty-heading-icon" data-empty-icon>▤</div><div><h1 id="empty-title" data-empty-title>Sales &amp; Invoicing</h1><p data-empty-description>Manage pharmacy sales and customer invoices.</p></div></div>
-          <article class="empty-state-card">
-            <div class="empty-state-icon" data-empty-icon>▤</div>
-            <h2 data-empty-title>Sales &amp; Invoicing</h2>
-            <p data-empty-message>This workspace is ready for your first record.</p>
-            <span class="empty-state-note">This module will appear here once it is built.</span>
-          </article>
-          <footer class="empty-footer">v1.0 <span>•</span> Local Data Storage</footer>
-        </section>
-      </main>
-    </div>
-    <script src="../../scripts/empty-state.js"></script>
-    <script src="../../scripts/sidebar.js"></script>
-    <script src="../../scripts/auth.js"></script>
-    <script>document.querySelector(".mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("show"));</script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pharma Sense module" />
+  <title>Pharma Sense</title>
+  <link rel="stylesheet" href="../../styles/dashboard.css" />
+  <link rel="stylesheet" href="../../styles/empty-state.css" />
+</head>
+
+<body data-page="dashboard">
+  <div class="app empty-app">
+    <aside class="sidebar" data-sidebar></aside>
+    <main class="main empty-main">
+      <header class="topbar empty-topbar">
+        <button class="mobile-menu" aria-label="Open menu">☰</button>
+        <div class="top-profile">
+          <div class="avatar" data-user-initials>AK</div>
+          <div class="profile-text"><strong data-user-name>Altaf Khan</strong><small>Administrator</small></div>
+        </div>
+      </header>
+      <section class="empty-content" aria-labelledby="empty-title">
+        <div class="empty-heading">
+          <div class="empty-heading-icon" data-empty-icon>▤</div>
+          <div>
+            <h1 id="empty-title" data-empty-title>Sales &amp; Invoicing</h1>
+            <p data-empty-description>Manage pharmacy sales and customer invoices.</p>
+          </div>
+        </div>
+        <article class="empty-state-card">
+          <div class="empty-state-icon" data-empty-icon>▤</div>
+          <h2 data-empty-title>Sales &amp; Invoicing</h2>
+          <p data-empty-message>This workspace is ready for your first record.</p>
+          <span class="empty-state-note">This module will appear here once it is built.</span>
+        </article>
+        <footer class="empty-footer">v1.0 <span>•</span> Local Data Storage</footer>
+      </section>
+    </main>
+  </div>
+  <script src="../../scripts/empty-state.js"></script>
+  <script src="../../scripts/sidebar.js"></script>
+  <script src="../../scripts/auth.js"></script>
+  <script>document.querySelector(".mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("show"));</script>
+</body>
+
 </html>

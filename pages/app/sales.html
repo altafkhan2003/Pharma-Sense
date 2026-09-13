@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pharma Sense sales and invoicing" />
+  <title>Pharma Sense - Sales &amp; Invoicing</title>
+  <link rel="stylesheet" href="../../styles/dashboard.css" />
+  <link rel="stylesheet" href="../../styles/sales.css" />
+</head>
+
+<body data-page="dashboard" data-active-nav="sales">
+  <div class="app sales-app">
+    <aside class="sidebar" data-sidebar></aside>
+    <main class="main sales-main">
+      <header class="topbar sales-topbar">
+        <button class="mobile-menu" aria-label="Open menu">☰</button>
+        <div class="sales-top-actions">
+          <label class="search-box sales-global-search"><span>⌕</span><input type="search" data-sales-global-search
+              placeholder="Search medicines, invoices..." aria-label="Search medicines and invoices" /></label>
+          <div class="top-profile">
+            <div class="avatar" data-user-initials>AK</div>
+            <div class="profile-text"><strong data-user-name>Altaf Khan</strong><small>Administrator</small></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="sales-content" aria-labelledby="sales-title">
+        <div class="sales-heading">
+          <div class="sales-heading-copy">
+            <div class="sales-page-icon">▤</div>
+            <div>
+              <h1 id="sales-title">Sales &amp; Invoicing</h1>
+              <p>Create invoices, record payments, and keep track of daily sales.</p>
+            </div>
+          </div>
+          <button class="sales-invoice-action" type="button" data-new-sale>＋ New Sale</button>
+        </div>
+
+        <section class="sales-summary" aria-label="Sales summary">
+          <article class="sales-summary-card total"><span class="sales-summary-icon">₹</span>
+            <div>
+              <p>Today's Sales</p><strong data-today-sales>₹24,680</strong><small><b>↑ 12.5%</b> compared to
+                yesterday</small>
+            </div>
+          </article>
+          <article class="sales-summary-card invoices"><span class="sales-summary-icon">▤</span>
+            <div>
+              <p>Invoices Created</p><strong data-invoice-count>42</strong><small>5 invoices pending payment</small>
+            </div>
+          </article>
+          <article class="sales-summary-card average"><span class="sales-summary-icon">◫</span>
+            <div>
+              <p>Average Invoice</p><strong data-average-invoice>₹588</strong><small>Across today's completed
+                sales</small>
+            </div>
+          </article>
+          <article class="sales-summary-card due"><span class="sales-summary-icon">◷</span>
+            <div>
+              <p>Amount Due</p><strong data-amount-due>₹3,240</strong><small>From 5 pending invoices</small>
+            </div>
+          </article>
+        </section>
+
+        <div class="sales-workspace">
+          <section class="sale-builder-card" aria-labelledby="new-sale-title">
+            <header class="sale-builder-header">
+              <div><span class="eyebrow">NEW INVOICE</span>
+                <h2 id="new-sale-title">Create a sale</h2>
+                <p>Search your stocked medicines and add them to this invoice.</p>
+              </div><span class="invoice-number" data-invoice-number>INV-2026-043</span>
+            </header>
+            <div class="sale-customer-row">
+              <label>Customer name <input data-customer-name autocomplete="off"
+                  placeholder="Walk-in customer" /></label>
+              <label>Payment method <select data-payment-method>
+                  <option>Cash</option>
+                  <option>UPI</option>
+                  <option>Card</option>
+                  <option>Credit</option>
+                </select></label>
+            </div>
+            <label class="medicine-picker"><span>⌕</span><input type="search" data-medicine-search autocomplete="off"
+                placeholder="Search medicine by name, brand, or SKU..."
+                aria-label="Search stock for an invoice" /><kbd>Enter to add</kbd></label>
+            <div class="medicine-results" data-medicine-results hidden role="listbox" aria-label="Matching medicines">
+            </div>
+            <div class="invoice-lines-wrap">
+              <table class="invoice-lines">
+                <thead>
+                  <tr>
+                    <th>Medicine</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th><span class="sr-only">Remove</span></th>
+                  </tr>
+                </thead>
+                <tbody data-invoice-lines>
+                  <tr class="invoice-empty">
+                    <td colspan="5"><span>⊕</span> Search for a medicine to start this invoice.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <footer class="sale-builder-footer"><span data-invoice-items>0 items</span><button class="text-button"
+                type="button" data-clear-sale>Clear sale</button></footer>
+          </section>
+
+          <aside class="invoice-summary-card" aria-label="Invoice summary">
+            <div class="invoice-summary-heading"><span>▤</span>
+              <h2>Invoice summary</h2>
+            </div>
+            <dl>
+              <div>
+                <dt>Subtotal</dt>
+                <dd data-subtotal>₹0</dd>
+              </div>
+              <div>
+                <dt>GST <small>5%</small></dt>
+                <dd data-tax>₹0</dd>
+              </div>
+              <div class="invoice-grand-total">
+                <dt>Total amount</dt>
+                <dd data-grand-total>₹0</dd>
+              </div>
+            </dl>
+            <button class="checkout-button" type="button" data-complete-sale disabled>Complete Sale
+              <span>→</span></button>
+            <p class="invoice-note">Completing this sale saves the invoice locally and updates the sales overview.</p>
+            <p class="sale-feedback" data-sale-feedback hidden role="status"></p>
+          </aside>
+        </div>
+
+        <section class="recent-sales-card" aria-labelledby="recent-sales-title">
+          <header class="recent-sales-header">
+            <div>
+              <h2 id="recent-sales-title">Recent invoices</h2>
+              <p>Today’s latest sales activity.</p>
+            </div><button class="view-all-button" type="button" data-view-all-sales>View all invoices →</button>
+          </header>
+          <div class="recent-sales-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Invoice No.</th>
+                  <th>Customer</th>
+                  <th>Items</th>
+                  <th>Payment</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th><span class="sr-only">Invoice</span></th>
+                </tr>
+              </thead>
+              <tbody data-recent-sales></tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="sales-footer">v1.0 <span>•</span> Local Data Storage</footer>
+      </section>
+    </main>
+  </div>
+  <script src="../../scripts/sidebar.js"></script>
+  <script src="../../scripts/auth.js"></script>
+  <script src="../../scripts/inventory.js"></script>
+  <script src="../../scripts/sales.js"></script>
+  <script>document.querySelector(".mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("show"));</script>
+</body>
+
+</html>

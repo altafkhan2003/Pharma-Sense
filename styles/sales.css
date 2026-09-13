@@ -1,0 +1,803 @@
+.sales-main {
+  min-height: 100vh;
+}
+
+.sales-topbar,
+.sales-top-actions,
+.sales-heading,
+.sales-heading-copy,
+.sales-summary-card,
+.sale-builder-header,
+.sale-customer-row,
+.medicine-picker,
+.sale-builder-footer,
+.invoice-summary-heading,
+.recent-sales-header {
+  display: flex;
+  align-items: center;
+}
+
+.sales-topbar {
+  justify-content: flex-end;
+}
+
+.sales-top-actions {
+  gap: 20px;
+}
+
+.sales-global-search {
+  width: min(310px, 31vw);
+  height: 38px;
+}
+
+.sales-content {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 24px 30px 12px;
+}
+
+.sales-heading {
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.sales-heading-copy {
+  gap: 14px;
+}
+
+.sales-page-icon {
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--primary);
+  background: #e1f7f1;
+  font-size: 25px;
+  box-shadow: 0 5px 13px rgba(7, 155, 129, .09);
+}
+
+.sales-heading h1 {
+  font-size: clamp(24px, 2.5vw, 31px);
+  letter-spacing: -1px;
+}
+
+.sales-heading p {
+  margin-top: 3px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.sales-invoice-action {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #fff;
+  background: var(--primary);
+  box-shadow: 0 7px 17px rgba(7, 155, 129, .18);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sales-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 17px;
+}
+
+.sales-summary-card {
+  gap: 13px;
+  min-height: 106px;
+  padding: 17px;
+  border: 1px solid #e4ebee;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(16, 42, 67, .025);
+}
+
+.sales-summary-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.total .sales-summary-icon {
+  color: #078a75;
+  background: #e2f7f1;
+}
+
+.invoices .sales-summary-icon {
+  color: #3584d7;
+  background: #e4f1ff;
+}
+
+.average .sales-summary-icon {
+  color: #7960cf;
+  background: #eeeaff;
+}
+
+.due .sales-summary-icon {
+  color: #ec8020;
+  background: #fff0e3;
+}
+
+.sales-summary-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.sales-summary-card strong {
+  display: block;
+  margin: 3px 0 4px;
+  color: #136d63;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.invoices strong {
+  color: #2b7ed1;
+}
+
+.average strong {
+  color: #705dc0;
+}
+
+.due strong {
+  color: #e58727;
+}
+
+.sales-summary-card small {
+  color: #778796;
+  font-size: 10px;
+}
+
+.sales-summary-card small b {
+  color: #079b81;
+}
+
+.sales-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 295px;
+  gap: 15px;
+  align-items: start;
+}
+
+.sale-builder-card,
+.invoice-summary-card,
+.recent-sales-card {
+  border: 1px solid #e4ebee;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(16, 42, 67, .025);
+}
+
+.sale-builder-header {
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 19px 15px;
+  border-bottom: 1px solid #eaf0f2;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .8px;
+}
+
+.sale-builder-header h2,
+.invoice-summary-card h2,
+.recent-sales-card h2 {
+  margin-top: 3px;
+  color: #304b60;
+  font-size: 17px;
+}
+
+.sale-builder-header p,
+.recent-sales-card p {
+  margin-top: 4px;
+  color: #778895;
+  font-size: 12px;
+}
+
+.invoice-number {
+  padding: 6px 9px;
+  border-radius: 5px;
+  color: #168673;
+  background: #e9f8f4;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.sale-customer-row {
+  gap: 12px;
+  padding: 15px 19px 10px;
+}
+
+.sale-customer-row label {
+  flex: 1;
+  color: #50697b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sale-customer-row input,
+.sale-customer-row select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid #dce6e9;
+  border-radius: 6px;
+  padding: 9px 10px;
+  outline-color: var(--primary);
+  color: #395266;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+}
+
+.medicine-picker {
+  gap: 8px;
+  margin: 4px 19px 12px;
+  padding: 0 11px;
+  height: 39px;
+  border: 1px solid #d7e4e7;
+  border-radius: 7px;
+  color: #8191a0;
+  background: #fbfdfd;
+}
+
+.medicine-picker input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--navy);
+  font-size: 12px;
+}
+
+.medicine-picker input::placeholder {
+  color: #9aa9b4;
+}
+
+.medicine-picker kbd {
+  font-size: 9px;
+}
+
+.medicine-results {
+  position: absolute;
+  z-index: 5;
+  width: min(650px, calc(100% - 385px));
+  max-height: 190px;
+  overflow-y: auto;
+  margin: -11px 19px 0;
+  border: 1px solid #cfe4df;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 12px 25px rgba(16, 42, 67, .12);
+}
+
+.medicine-result {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-bottom: 1px solid #eff3f4;
+  color: #405d70;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+.medicine-result:last-child {
+  border-bottom: 0;
+}
+
+.medicine-result:hover {
+  color: #087d6b;
+  background: #f2fbf9;
+}
+
+.medicine-result b {
+  color: #304b60;
+}
+
+.medicine-result small {
+  margin-left: auto;
+  color: #728695;
+}
+
+.result-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #39b696;
+}
+
+.invoice-lines-wrap {
+  overflow-x: auto;
+}
+
+.invoice-lines {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.invoice-lines th {
+  padding: 10px 19px;
+  color: #617789;
+  background: #f4f8f9;
+  font-size: 10px;
+  text-align: left;
+}
+
+.invoice-lines td {
+  padding: 10px 19px;
+  border-bottom: 1px solid #edf1f3;
+  color: #526a7d;
+  font-size: 12px;
+}
+
+.invoice-lines td:first-child {
+  color: #395266;
+  font-weight: 700;
+}
+
+.line-meta {
+  display: block;
+  margin-top: 2px;
+  color: #8a9aa6;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.line-quantity {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid #dce7e9;
+  border-radius: 5px;
+}
+
+.line-quantity button {
+  width: 23px;
+  border: 0;
+  color: #547082;
+  background: #f8fbfb;
+  cursor: pointer;
+}
+
+.line-quantity span {
+  min-width: 25px;
+  padding: 4px 6px;
+  border-inline: 1px solid #dce7e9;
+  text-align: center;
+  font-size: 11px;
+}
+
+.remove-line {
+  border: 0;
+  color: #a0afb8;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.remove-line:hover {
+  color: #e85b55;
+}
+
+.invoice-empty td {
+  padding: 31px;
+  color: #92a1aa;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400 !important;
+}
+
+.invoice-empty span {
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.sale-builder-footer {
+  justify-content: space-between;
+  padding: 11px 19px;
+  color: #7b8d9b;
+  font-size: 11px;
+}
+
+.text-button,
+.view-all-button {
+  border: 0;
+  color: var(--primary);
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-button:disabled {
+  color: #adb9c0;
+  cursor: default;
+}
+
+.invoice-summary-card {
+  padding: 19px;
+}
+
+.invoice-summary-heading {
+  gap: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eaf0f2;
+}
+
+.invoice-summary-heading>span {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 7px;
+  color: var(--primary);
+  background: #e2f7f1;
+}
+
+.invoice-summary-heading h2 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.invoice-summary-card dl {
+  margin: 14px 0 17px;
+}
+
+.invoice-summary-card dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  color: #71838f;
+  font-size: 12px;
+}
+
+.invoice-summary-card dd {
+  color: #385568;
+  font-weight: 700;
+}
+
+.invoice-summary-card dt small {
+  margin-left: 4px;
+  color: #91a0aa;
+}
+
+.invoice-summary-card .invoice-grand-total {
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px dashed #cfdde1;
+  color: #304b60;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.invoice-grand-total dd {
+  color: #087d6b;
+  font-size: 21px;
+}
+
+.checkout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+  border: 0;
+  border-radius: 7px;
+  padding: 12px;
+  color: #fff;
+  background: var(--primary);
+  box-shadow: 0 6px 13px rgba(7, 155, 129, .16);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.checkout-button:disabled {
+  background: #b5c8c6;
+  box-shadow: none;
+  cursor: default;
+}
+
+.checkout-button span {
+  font-size: 17px;
+}
+
+.invoice-note {
+  margin-top: 13px;
+  color: #84949f;
+  font-size: 10px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.sale-feedback {
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  color: #087d6b;
+  background: #e8f8f3;
+  font-size: 11px;
+  text-align: center;
+}
+
+.recent-sales-card {
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.recent-sales-header {
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #e7edef;
+}
+
+.recent-sales-header h2 {
+  margin: 0;
+}
+
+.recent-sales-wrap {
+  overflow-x: auto;
+}
+
+.recent-sales-card table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.recent-sales-card th {
+  padding: 11px 18px;
+  color: #5f7486;
+  background: #f4f8f9;
+  font-size: 10px;
+  text-align: left;
+}
+
+.recent-sales-card td {
+  padding: 11px 18px;
+  border-bottom: 1px solid #edf1f3;
+  color: #526a7d;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.recent-sales-card tr:last-child td {
+  border-bottom: 0;
+}
+
+.recent-sales-card td:first-child {
+  color: #147d6d;
+  font-weight: 800;
+}
+
+.payment-method {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 11px;
+  color: #4b7284;
+  background: #eff5f7;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.invoice-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 11px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.invoice-status.paid {
+  color: #0a9079;
+  background: #e3f8f1;
+}
+
+.invoice-status.pending {
+  color: #e28a22;
+  background: #fff2df;
+}
+
+.invoice-link {
+  border: 0;
+  color: var(--primary);
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sales-footer {
+  padding: 15px 0 0;
+  color: #71828e;
+  font-size: 11px;
+}
+
+.sales-footer span {
+  padding: 0 8px;
+  color: var(--primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 1200px) {
+  .sales-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-summary-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .invoice-summary-heading,
+  .invoice-summary-card dl {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .invoice-summary-card dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    gap: 8px;
+  }
+
+  .invoice-summary-card dl div {
+    display: block;
+    padding: 0;
+  }
+
+  .invoice-summary-card .invoice-grand-total {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .invoice-summary-card .checkout-button {
+    grid-column: 1 / -1;
+  }
+
+  .invoice-note,
+  .sale-feedback {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sales-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .medicine-results {
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 650px) {
+  .sales-content {
+    padding: 20px 14px 12px;
+  }
+
+  .sales-topbar {
+    justify-content: space-between;
+  }
+
+  .sales-global-search {
+    width: 40px;
+  }
+
+  .sales-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sales-invoice-action {
+    width: 100%;
+  }
+
+  .sales-summary {
+    gap: 9px;
+  }
+
+  .sales-summary-card {
+    min-height: 92px;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .sales-summary-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .sales-summary-card strong {
+    font-size: 19px;
+  }
+
+  .sales-summary-card small {
+    display: none;
+  }
+
+  .sale-builder-header {
+    align-items: flex-start;
+  }
+
+  .sale-customer-row {
+    flex-direction: column;
+  }
+
+  .sale-customer-row label {
+    width: 100%;
+  }
+
+  .invoice-summary-card {
+    display: block;
+  }
+
+  .invoice-summary-card dl {
+    display: block;
+    margin: 14px 0 17px;
+  }
+
+  .invoice-summary-card dl div {
+    display: flex;
+    padding: 8px 0;
+  }
+
+  .invoice-summary-card .invoice-grand-total {
+    margin-top: 6px;
+    padding-top: 14px;
+    border-top: 1px dashed #cfdde1;
+  }
+
+  .invoice-note {
+    margin-top: 13px;
+  }
+
+  .sale-feedback {
+    margin-top: 12px;
+  }
+
+  .recent-sales-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

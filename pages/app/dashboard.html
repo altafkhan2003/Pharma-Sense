@@ -1,316 +1,301 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Pharma Sense - Dashboard</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="../../styles/dashboard.css" />
-  </head>
+  <title>Pharma Sense - Dashboard</title>
 
-  <body data-page="dashboard" data-active-nav="dashboard">
-    <div class="app">
-      <!-- ================= SIDEBAR ================= -->
-      <aside class="sidebar" data-sidebar>
-        <!-- Logo -->
-        <div class="brand">
-          
-          <span>
-            <img src="../../assets/images/core/logo_pharma_sense.png" alt="">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../../styles/dashboard.css" />
+</head>
 
-          </span>
+<body data-page="dashboard" data-active-nav="dashboard">
+  <div class="app">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" data-sidebar>
+      <!-- Logo -->
+      <div class="brand">
+
+        <span>
+          <img src="../../assets/images/core/logo_pharma_sense.png" alt="">
+
+        </span>
+        <div>
+          <h1>Pharma Sense</h1>
+          <p>Pharmacy Management System </p>
+        </div>
+      </div>
+
+
+
+      <!-- Navigation -->
+      <nav class="navigation">
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="#" class="nav-item active">
+          <span class="nav-icon">⌂</span>
+          Dashboard
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">▣</span>
+          Medicines
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">▤</span>
+          Stock Management
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">₹</span>
+          Sales
+          <span class="nav-badge">12</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🛒</span>
+          Purchase
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">♙</span>
+          Suppliers
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">◷</span>
+          Expiry Management
+        </a>
+
+        <p class="menu-title section-title">ANALYTICS</p>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">▥</span>
+          Reports & Analytics
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">♧</span>
+          Alerts
+          <span class="alert-dot"></span>
+        </a>
+
+        <p class="menu-title section-title">SYSTEM</p>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">♙</span>
+          Users
+        </a>
+
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⚙</span>
+          Settings
+        </a>
+      </nav>
+
+      <!-- Sidebar Bottom -->
+      <div class="sidebar-bottom">
+        <div class="help-box">
+          <div class="help-icon">?</div>
+
           <div>
-            <h1>Pharma Sense</h1>
-            <p>Pharmacy Management System </p>
+            <strong>Need Help?</strong>
+            <small>Contact support</small>
           </div>
-          </div>
+        </div>
 
-       
+        <div class="admin-profile">
+          <div class="avatar" data-user-initials>AK</div>
 
-        <!-- Navigation -->
-        <nav class="navigation">
-          <p class="menu-title">MAIN MENU</p>
-
-          <a href="#" class="nav-item active">
-            <span class="nav-icon">⌂</span>
-            Dashboard
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">▣</span>
-            Medicines
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">▤</span>
-            Stock Management
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">₹</span>
-            Sales
-            <span class="nav-badge">12</span>
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">🛒</span>
-            Purchase
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">♙</span>
-            Suppliers
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">◷</span>
-            Expiry Management
-          </a>
-
-          <p class="menu-title section-title">ANALYTICS</p>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">▥</span>
-            Reports & Analytics
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">♧</span>
-            Alerts
-            <span class="alert-dot"></span>
-          </a>
-
-          <p class="menu-title section-title">SYSTEM</p>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">♙</span>
-            Users
-          </a>
-
-          <a href="#" class="nav-item">
-            <span class="nav-icon">⚙</span>
-            Settings
-          </a>
-        </nav>
-
-        <!-- Sidebar Bottom -->
-        <div class="sidebar-bottom">
-          <div class="help-box">
-            <div class="help-icon">?</div>
-
-            <div>
-              <strong>Need Help?</strong>
-              <small>Contact support</small>
-            </div>
+          <div>
+            <strong data-user-name>Admin User</strong>
+            <small>Administrator</small>
           </div>
 
-          <div class="admin-profile">
+          <span class="more">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main">
+      <!-- Top Header -->
+      <header class="topbar">
+        <button class="mobile-menu">☰</button>
+
+        <div class="page-title">
+          <h2>Dashboard</h2>
+          <p>Welcome back! Here's what's happening today.</p>
+        </div>
+
+        <div class="top-actions">
+          <!-- Search -->
+          <div class="search-box">
+            <span>⌕</span>
+
+            <input type="text" placeholder="Search medicines, invoices..." />
+
+            <kbd>Ctrl K</kbd>
+          </div>
+
+          <!-- Notification -->
+          <button class="notification">
+            ♧
+            <span></span>
+          </button>
+
+          <!-- Profile -->
+          <div class="top-profile">
             <div class="avatar" data-user-initials>AK</div>
 
-            <div>
-              <strong data-user-name>Admin User</strong>
+            <div class="profile-text">
+              <strong data-user-name>Altaf Khan</strong>
               <small>Administrator</small>
             </div>
 
-            <span class="more">•••</span>
+
           </div>
         </div>
-      </aside>
+      </header>
 
-      <!-- ================= MAIN CONTENT ================= -->
+      <!-- ================= PAGE CONTENT ================= -->
 
-      <main class="main">
-        <!-- Top Header -->
-        <header class="topbar">
-          <button class="mobile-menu">☰</button>
+      <section class="content">
+        <!-- Welcome Section -->
 
-          <div class="page-title">
-            <h2>Dashboard</h2>
-            <p>Welcome back! Here's what's happening today.</p>
+        <div class="welcome">
+          <div>
+            <span class="date"> THURSDAY, SEPTEMBER 10, 2026 </span>
+
+            <h1>Good evening, <span data-user-first-name>Altaf</span> 👋</h1>
+
+            <p>Here's your pharmacy overview for today.</p>
           </div>
 
-          <div class="top-actions">
-            <!-- Search -->
-            <div class="search-box">
-              <span>⌕</span>
+          <button class="primary-button" type="button" data-open-inventory-modal>＋ Add Medicine</button>
+        </div>
 
-              <input type="text" placeholder="Search medicines, invoices..." />
+        <!-- ================= STAT CARDS ================= -->
 
-              <kbd>Ctrl K</kbd>
+        <div class="stats">
+          <!-- Total Medicines -->
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon green">▣</div>
+
+              <span class="growth"> ↑ 8.2% </span>
             </div>
 
-            <!-- Notification -->
-            <button class="notification">
-              ♧
-              <span></span>
-            </button>
+            <p>Total Medicines</p>
 
-            <!-- Profile -->
-            <div class="top-profile">
-              <div class="avatar" data-user-initials>AK</div>
+            <h3>1,524</h3>
 
-              <div class="profile-text">
-                <strong data-user-name>Altaf Khan</strong>
-                <small>Administrator</small>
-              </div>
-
-            
-            </div>
-          </div>
-        </header>
-
-        <!-- ================= PAGE CONTENT ================= -->
-
-        <section class="content">
-          <!-- Welcome Section -->
-
-          <div class="welcome">
-            <div>
-              <span class="date"> THURSDAY, SEPTEMBER 10, 2026 </span>
-
-              <h1>Good evening, <span data-user-first-name>Altaf</span> 👋</h1>
-
-              <p>Here's your pharmacy overview for today.</p>
-            </div>
-
-            <button class="primary-button" type="button" data-open-inventory-modal>＋ Add Medicine</button>
+            <small> Compared to last month </small>
           </div>
 
-          <!-- ================= STAT CARDS ================= -->
+          <!-- Sales -->
 
-          <div class="stats">
-            <!-- Total Medicines -->
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon blue">₹</div>
 
-            <div class="stat-card">
-              <div class="stat-header">
-                <div class="stat-icon green">▣</div>
-
-                <span class="growth"> ↑ 8.2% </span>
-              </div>
-
-              <p>Total Medicines</p>
-
-              <h3>1,524</h3>
-
-              <small> Compared to last month </small>
+              <span class="growth"> ↑ 12.5% </span>
             </div>
 
-            <!-- Sales -->
+            <p>Today's Sales</p>
 
-            <div class="stat-card">
-              <div class="stat-header">
-                <div class="stat-icon blue">₹</div>
+            <h3>₹24,680</h3>
 
-                <span class="growth"> ↑ 12.5% </span>
-              </div>
-
-              <p>Today's Sales</p>
-
-              <h3>₹24,680</h3>
-
-              <small> Compared to yesterday </small>
-            </div>
-
-            <!-- Low Stock -->
-
-            <div class="stat-card">
-              <div class="stat-header">
-                <div class="stat-icon orange">!</div>
-
-                <span class="warning"> Attention </span>
-              </div>
-
-              <p>Low Stock Items</p>
-
-              <h3>18</h3>
-
-              <small> Medicines below minimum stock </small>
-            </div>
-
-            <!-- Expiry -->
-
-            <div class="stat-card">
-              <div class="stat-header">
-                <div class="stat-icon red">◷</div>
-
-                <span class="danger"> View items </span>
-              </div>
-
-              <p>Expiring Soon</p>
-
-              <h3>32</h3>
-
-              <small> Within the next 30 days </small>
-            </div>
+            <small> Compared to yesterday </small>
           </div>
 
-          <!-- ================= CHART + QUICK ACTIONS ================= -->
+          <!-- Low Stock -->
 
-          <div class="dashboard-grid">
-            <!-- Sales Chart -->
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon orange">!</div>
 
-            <div class="panel sales-panel">
-              <div class="panel-header">
-                <div>
-                  <h2>Sales Overview</h2>
-                  <p>Track your sales performance</p>
+              <span class="warning"> Attention </span>
+            </div>
+
+            <p>Low Stock Items</p>
+
+            <h3>18</h3>
+
+            <small> Medicines below minimum stock </small>
+          </div>
+
+          <!-- Expiry -->
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon red">◷</div>
+
+              <span class="danger"> View items </span>
+            </div>
+
+            <p>Expiring Soon</p>
+
+            <h3>32</h3>
+
+            <small> Within the next 30 days </small>
+          </div>
+        </div>
+
+        <!-- ================= CHART + QUICK ACTIONS ================= -->
+
+        <div class="dashboard-grid">
+          <!-- Sales Chart -->
+
+          <div class="panel sales-panel">
+            <div class="panel-header">
+              <div>
+                <h2>Sales Overview</h2>
+                <p>Track your sales performance</p>
+              </div>
+
+              <select>
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div>
+
+            <div class="chart">
+              <div class="chart-y-axis">
+                <span>₹40K</span>
+                <span>₹30K</span>
+                <span>₹20K</span>
+                <span>₹10K</span>
+                <span>₹0</span>
+              </div>
+
+              <div class="chart-content">
+                <div class="chart-lines">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
                 </div>
 
-                <select>
-                  <option>This Week</option>
-                  <option>This Month</option>
-                  <option>This Year</option>
-                </select>
-              </div>
+                <!-- SVG Chart -->
 
-              <div class="chart">
-                <div class="chart-y-axis">
-                  <span>₹40K</span>
-                  <span>₹30K</span>
-                  <span>₹20K</span>
-                  <span>₹10K</span>
-                  <span>₹0</span>
-                </div>
+                <svg viewBox="0 0 700 250" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="salesGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#079b81" stop-opacity=".25" />
 
-                <div class="chart-content">
-                  <div class="chart-lines">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                  </div>
+                      <stop offset="100%" stop-color="#079b81" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
 
-                  <!-- SVG Chart -->
-
-                  <svg viewBox="0 0 700 250" preserveAspectRatio="none">
-                    <defs>
-                      <linearGradient
-                        id="salesGradient"
-                        x1="0"
-                        y1="0"
-                        x2="0"
-                        y2="1"
-                      >
-                        <stop
-                          offset="0%"
-                          stop-color="#079b81"
-                          stop-opacity=".25"
-                        />
-
-                        <stop
-                          offset="100%"
-                          stop-color="#079b81"
-                          stop-opacity="0"
-                        />
-                      </linearGradient>
-                    </defs>
-
-                    <path
-                      class="chart-fill"
-                      d="
+                  <path class="chart-fill" d="
                                     M0 205
                                     C50 160 70 180 110 170
                                     S165 105 215 145
@@ -320,12 +305,9 @@
                                     S590 55 700 25
                                     L700 250
                                     L0 250 Z
-                                    "
-                    />
+                                    " />
 
-                    <path
-                      class="chart-line"
-                      d="
+                  <path class="chart-line" d="
                                     M0 205
                                     C50 160 70 180 110 170
                                     S165 105 215 145
@@ -333,282 +315,282 @@
                                     S365 75 410 105
                                     S460 165 510 125
                                     S590 55 700 25
-                                    "
-                    />
+                                    " />
 
-                    <circle cx="0" cy="205" r="5" />
-                    <circle cx="110" cy="170" r="5" />
-                    <circle cx="215" cy="145" r="5" />
-                    <circle cx="315" cy="130" r="5" />
-                    <circle cx="410" cy="105" r="5" />
-                    <circle cx="510" cy="125" r="5" />
-                    <circle cx="700" cy="25" r="5" />
-                  </svg>
+                  <circle cx="0" cy="205" r="5" />
+                  <circle cx="110" cy="170" r="5" />
+                  <circle cx="215" cy="145" r="5" />
+                  <circle cx="315" cy="130" r="5" />
+                  <circle cx="410" cy="105" r="5" />
+                  <circle cx="510" cy="125" r="5" />
+                  <circle cx="700" cy="25" r="5" />
+                </svg>
 
-                  <div class="days">
-                    <span>Mon</span>
-                    <span>Tue</span>
-                    <span>Wed</span>
-                    <span>Thu</span>
-                    <span>Fri</span>
-                    <span>Sat</span>
-                    <span>Sun</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quick Actions -->
-
-            <div class="panel quick-panel">
-              <div class="panel-header">
-                <div>
-                  <h2>Quick Actions</h2>
-                  <p>Common pharmacy tasks</p>
-                </div>
-              </div>
-
-              <div class="quick-actions">
-                <a href="#" data-open-inventory-modal>
-                  <span class="quick-icon green"> ＋ </span>
-
-                  <div>
-                    <strong>Add Medicine</strong>
-                    <small>Add new medicine to inventory</small>
-                  </div>
-
-                  <b>›</b>
-                </a>
-
-                <a href="#">
-                  <span class="quick-icon blue"> ₹ </span>
-
-                  <div>
-                    <strong>New Sale</strong>
-                    <small>Create a new sales invoice</small>
-                  </div>
-
-                  <b>›</b>
-                </a>
-
-                <a href="#">
-                  <span class="quick-icon purple"> 🛒 </span>
-
-                  <div>
-                    <strong>New Purchase</strong>
-                    <small>Record supplier purchase</small>
-                  </div>
-
-                  <b>›</b>
-                </a>
-
-                <a href="#">
-                  <span class="quick-icon orange"> ▤ </span>
-
-                  <div>
-                    <strong>View Reports</strong>
-                    <small>Check pharmacy reports</small>
-                  </div>
-
-                  <b>›</b>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- ================= BOTTOM SECTION ================= -->
-
-          <div class="bottom-grid">
-            <!-- Low Stock Table -->
-
-            <div class="panel table-panel">
-              <div class="panel-header">
-                <div>
-                  <h2>Low Stock Medicines</h2>
-                  <p>Medicines that need restocking</p>
-                </div>
-
-                <a href="#" class="view-all"> View All → </a>
-              </div>
-
-              <div class="table-container">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>MEDICINE</th>
-                      <th>CATEGORY</th>
-                      <th>AVAILABLE</th>
-                      <th>MIN. STOCK</th>
-                      <th>STATUS</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    <tr>
-                      <td>
-                        <strong>Amoxicillin 500mg</strong>
-                        <small>AMX-500-24</small>
-                      </td>
-
-                      <td>Antibiotic</td>
-
-                      <td>
-                        <strong>8</strong>
-                      </td>
-
-                      <td>50</td>
-
-                      <td>
-                        <span class="status critical"> Critical </span>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <strong>Azithromycin 250mg</strong>
-                        <small>AZT-250-18</small>
-                      </td>
-
-                      <td>Antibiotic</td>
-
-                      <td>
-                        <strong>15</strong>
-                      </td>
-
-                      <td>40</td>
-
-                      <td>
-                        <span class="status low"> Low Stock </span>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <strong>Metformin 500mg</strong>
-                        <small>MET-500-31</small>
-                      </td>
-
-                      <td>Diabetes</td>
-
-                      <td>
-                        <strong>22</strong>
-                      </td>
-
-                      <td>50</td>
-
-                      <td>
-                        <span class="status low"> Low Stock </span>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <strong>Omeprazole 20mg</strong>
-                        <small>OMP-020-09</small>
-                      </td>
-
-                      <td>Gastric</td>
-
-                      <td>
-                        <strong>28</strong>
-                      </td>
-
-                      <td>50</td>
-
-                      <td>
-                        <span class="status low"> Low Stock </span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- Expiry Alerts -->
-
-            <div class="panel expiry-panel">
-              <div class="panel-header">
-                <div>
-                  <h2>Expiry Alerts</h2>
-                  <p>Medicines expiring soon</p>
-                </div>
-
-                <a href="expiry.html" class="view-all"> View All → </a>
-              </div>
-
-              <div class="expiry-list">
-                <div class="expiry-item">
-                  <div class="medicine-icon">P</div>
-
-                  <div>
-                    <strong>Paracetamol 500mg</strong>
-                    <small>Batch: PCM-2408</small>
-                  </div>
-
-                  <span>12 days</span>
-                </div>
-
-                <div class="expiry-item">
-                  <div class="medicine-icon"></div>
-
-                  <div>
-                    <strong>Cetirizine 10mg</strong>
-                    <small>Batch: CTZ-1124</small>
-                  </div>
-
-                  <span>18 days</span>
-                </div>
-
-                <div class="expiry-item">
-                  <div class="medicine-icon">P</div>
-
-                  <div>
-                    <strong>Pantoprazole 40mg</strong>
-                    <small>Batch: PTZ-0831</small>
-                  </div>
-
-                  <span>25 days</span>
-                </div>
-
-                <div class="expiry-item">
-                  <div class="medicine-icon">D</div>
-
-                  <div>
-                    <strong>Diclofenac 50mg</strong>
-                    <small>Batch: DIC-0918</small>
-                  </div>
-
-                  <span>29 days</span>
+                <div class="days">
+                  <span>Mon</span>
+                  <span>Tue</span>
+                  <span>Wed</span>
+                  <span>Thu</span>
+                  <span>Fri</span>
+                  <span>Sat</span>
+                  <span>Sun</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Footer -->
+          <!-- Quick Actions -->
 
-          <footer>
-            <span>© 2026 Pharma Sense</span>
-            <span>•</span>
-            <span>Local Data Storage</span>
-            <span>•</span>
-            <span>Version 1.0.0</span>
-          </footer>
-        </section>
-      </main>
-    </div>
+          <div class="panel quick-panel">
+            <div class="panel-header">
+              <div>
+                <h2>Quick Actions</h2>
+                <p>Common pharmacy tasks</p>
+              </div>
+            </div>
 
-    <script src="../../scripts/sidebar.js"></script>
+            <div class="quick-actions">
+              <a href="#" data-open-inventory-modal>
+                <span class="quick-icon green"> ＋ </span>
 
-    <!-- Mobile sidebar -->
-    <script>
-      const menuButton = document.querySelector(".mobile-menu");
-      const sidebar = document.querySelector(".sidebar");
+                <div>
+                  <strong>Add Medicine</strong>
+                  <small>Add new medicine to inventory</small>
+                </div>
 
-      menuButton.addEventListener("click", function () {
-        sidebar.classList.toggle("show");
-      });
-    </script>
-    <script src="../../scripts/auth.js"></script>
-    <script src="../../scripts/inventory.js"></script>
-  </body>
+                <b>›</b>
+              </a>
+
+              <a href="#">
+                <span class="quick-icon blue"> ₹ </span>
+
+                <div>
+                  <strong>New Sale</strong>
+                  <small>Create a new sales invoice</small>
+                </div>
+
+                <b>›</b>
+              </a>
+
+              <a href="#">
+                <span class="quick-icon purple"> 🛒 </span>
+
+                <div>
+                  <strong>New Purchase</strong>
+                  <small>Record supplier purchase</small>
+                </div>
+
+                <b>›</b>
+              </a>
+
+              <a href="#">
+                <span class="quick-icon orange"> ▤ </span>
+
+                <div>
+                  <strong>View Reports</strong>
+                  <small>Check pharmacy reports</small>
+                </div>
+
+                <b>›</b>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= BOTTOM SECTION ================= -->
+
+        <div class="bottom-grid">
+          <!-- Low Stock Table -->
+
+          <div class="panel table-panel">
+            <div class="panel-header">
+              <div>
+                <h2>Low Stock Medicines</h2>
+                <p>Medicines that need restocking</p>
+              </div>
+
+              <a href="#" class="view-all"> View All → </a>
+            </div>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>MEDICINE</th>
+                    <th>CATEGORY</th>
+                    <th>AVAILABLE</th>
+                    <th>MIN. STOCK</th>
+                    <th>STATUS</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Amoxicillin 500mg</strong>
+                      <small>AMX-500-24</small>
+                    </td>
+
+                    <td>Antibiotic</td>
+
+                    <td>
+                      <strong>8</strong>
+                    </td>
+
+                    <td>50</td>
+
+                    <td>
+                      <span class="status critical"> Critical </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <strong>Azithromycin 250mg</strong>
+                      <small>AZT-250-18</small>
+                    </td>
+
+                    <td>Antibiotic</td>
+
+                    <td>
+                      <strong>15</strong>
+                    </td>
+
+                    <td>40</td>
+
+                    <td>
+                      <span class="status low"> Low Stock </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <strong>Metformin 500mg</strong>
+                      <small>MET-500-31</small>
+                    </td>
+
+                    <td>Diabetes</td>
+
+                    <td>
+                      <strong>22</strong>
+                    </td>
+
+                    <td>50</td>
+
+                    <td>
+                      <span class="status low"> Low Stock </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <strong>Omeprazole 20mg</strong>
+                      <small>OMP-020-09</small>
+                    </td>
+
+                    <td>Gastric</td>
+
+                    <td>
+                      <strong>28</strong>
+                    </td>
+
+                    <td>50</td>
+
+                    <td>
+                      <span class="status low"> Low Stock </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Expiry Alerts -->
+
+          <div class="panel expiry-panel">
+            <div class="panel-header">
+              <div>
+                <h2>Expiry Alerts</h2>
+                <p>Medicines expiring soon</p>
+              </div>
+
+              <a href="expiry.html" class="view-all"> View All → </a>
+            </div>
+
+            <div class="expiry-list">
+              <div class="expiry-item">
+                <div class="medicine-icon">P</div>
+
+                <div>
+                  <strong>Paracetamol 500mg</strong>
+                  <small>Batch: PCM-2408</small>
+                </div>
+
+                <span>12 days</span>
+              </div>
+
+              <div class="expiry-item">
+                <div class="medicine-icon"></div>
+
+                <div>
+                  <strong>Cetirizine 10mg</strong>
+                  <small>Batch: CTZ-1124</small>
+                </div>
+
+                <span>18 days</span>
+              </div>
+
+              <div class="expiry-item">
+                <div class="medicine-icon">P</div>
+
+                <div>
+                  <strong>Pantoprazole 40mg</strong>
+                  <small>Batch: PTZ-0831</small>
+                </div>
+
+                <span>25 days</span>
+              </div>
+
+              <div class="expiry-item">
+                <div class="medicine-icon">D</div>
+
+                <div>
+                  <strong>Diclofenac 50mg</strong>
+                  <small>Batch: DIC-0918</small>
+                </div>
+
+                <span>29 days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+
+        <footer>
+          <span>© 2026 Pharma Sense</span>
+          <span>•</span>
+          <span>Local Data Storage</span>
+          <span>•</span>
+          <span>Version 1.0.0</span>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../scripts/sidebar.js"></script>
+
+  <!-- Mobile sidebar -->
+  <script>
+    const menuButton = document.querySelector(".mobile-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    menuButton.addEventListener("click", function () {
+      sidebar.classList.toggle("show");
+    });
+  </script>
+  <script src="../../scripts/auth.js"></script>
+  <script src="../../scripts/inventory.js"></script>
+</body>
+
 </html>

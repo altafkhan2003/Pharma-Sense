@@ -1,70 +1,129 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pharma Sense expiry alerts" />
-    <title>Pharma Sense - Expiry Alerts</title>
-    <link rel="stylesheet" href="../../styles/dashboard.css" />
-    <link rel="stylesheet" href="../../styles/expiry.css" />
-  </head>
-  <body data-page="dashboard" data-active-nav="expiry">
-    <div class="app expiry-app">
-      <aside class="sidebar" data-sidebar></aside>
-      <main class="main expiry-main">
-        <header class="topbar expiry-topbar">
-          <button class="mobile-menu" aria-label="Open menu">☰</button>
-          <div class="expiry-top-actions">
-            <label class="search-box expiry-global-search"><span>⌕</span><input type="search" placeholder="Search medicines, brands, categories..." aria-label="Search medicines, brands, categories" /></label>
-            <div class="top-profile"><div class="avatar" data-user-initials>AK</div><div class="profile-text"><strong data-user-name>Altaf Khan</strong><small>Administrator</small></div></div>
-          </div>
-        </header>
 
-        <section class="expiry-content" aria-labelledby="expiry-title">
-          <div class="expiry-heading">
-            <div class="expiry-heading-copy"><div class="expiry-page-icon">♧</div><div><h1 id="expiry-title">Expiry Alerts</h1><p>Track medicines nearing expiry and take action on time.</p></div></div>
-            <button class="expiry-date" type="button" aria-label="Current report date">▣ <span>Mon, 11 Aug 2025</span>⌄</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pharma Sense expiry alerts" />
+  <title>Pharma Sense - Expiry Alerts</title>
+  <link rel="stylesheet" href="../../styles/dashboard.css" />
+  <link rel="stylesheet" href="../../styles/expiry.css" />
+</head>
 
-          <section class="expiry-summary" aria-label="Expiry summary">
-            <article class="expiry-summary-card expired"><span class="expiry-summary-icon">⚠</span><div><p>Expired</p><strong>6</strong><small>items already expired</small></div><span class="summary-arrow">›</span></article>
-            <article class="expiry-summary-card week"><span class="expiry-summary-icon">◷</span><div><p>Due in 7 Days</p><strong>12</strong><small>items expiring soon</small></div><span class="summary-arrow">›</span></article>
-            <article class="expiry-summary-card month"><span class="expiry-summary-icon">▣</span><div><p>Due in 30 Days</p><strong>28</strong><small>items expiring within 30 days</small></div><span class="summary-arrow">›</span></article>
-            <article class="expiry-summary-card risk"><span class="expiry-summary-icon">▣</span><div><p>Total At Risk</p><strong>40</strong><small>items need attention</small></div><span class="summary-arrow">›</span></article>
+<body data-page="dashboard" data-active-nav="expiry">
+  <div class="app expiry-app">
+    <aside class="sidebar" data-sidebar></aside>
+    <main class="main expiry-main">
+      <header class="topbar expiry-topbar">
+        <button class="mobile-menu" aria-label="Open menu">☰</button>
+        <div class="expiry-top-actions">
+          <label class="search-box expiry-global-search"><span>⌕</span><input type="search"
+              placeholder="Search medicines, brands, categories..."
+              aria-label="Search medicines, brands, categories" /></label>
+          <div class="top-profile">
+            <div class="avatar" data-user-initials>AK</div>
+            <div class="profile-text"><strong data-user-name>Altaf Khan</strong><small>Administrator</small></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="expiry-content" aria-labelledby="expiry-title">
+        <div class="expiry-heading">
+          <div class="expiry-heading-copy">
+            <div class="expiry-page-icon">♧</div>
+            <div>
+              <h1 id="expiry-title">Expiry Alerts</h1>
+              <p>Track medicines nearing expiry and take action on time.</p>
+            </div>
+          </div>
+          <button class="expiry-date" type="button" aria-label="Current report date">▣ <span>Mon, 11 Aug
+              2025</span>⌄</button>
+        </div>
+
+        <section class="expiry-summary" aria-label="Expiry summary">
+          <article class="expiry-summary-card expired"><span class="expiry-summary-icon">⚠</span>
+            <div>
+              <p>Expired</p><strong>6</strong><small>items already expired</small>
+            </div><span class="summary-arrow">›</span>
+          </article>
+          <article class="expiry-summary-card week"><span class="expiry-summary-icon">◷</span>
+            <div>
+              <p>Due in 7 Days</p><strong>12</strong><small>items expiring soon</small>
+            </div><span class="summary-arrow">›</span>
+          </article>
+          <article class="expiry-summary-card month"><span class="expiry-summary-icon">▣</span>
+            <div>
+              <p>Due in 30 Days</p><strong>28</strong><small>items expiring within 30 days</small>
+            </div><span class="summary-arrow">›</span>
+          </article>
+          <article class="expiry-summary-card risk"><span class="expiry-summary-icon">▣</span>
+            <div>
+              <p>Total At Risk</p><strong>40</strong><small>items need attention</small>
+            </div><span class="summary-arrow">›</span>
+          </article>
+        </section>
+
+        <div class="expiry-workspace">
+          <section class="expiry-table-card" aria-label="Expiry alert list">
+            <div class="expiry-toolbar">
+              <div class="expiry-tabs" role="tablist" aria-label="Expiry filters">
+                <button type="button" class="expiry-tab active" data-expiry-filter="all" role="tab">▦ All</button>
+                <button type="button" class="expiry-tab" data-expiry-filter="expired" role="tab">⚠ Expired</button>
+                <button type="button" class="expiry-tab" data-expiry-filter="week" role="tab">◷ 7 Days</button>
+                <button type="button" class="expiry-tab" data-expiry-filter="month" role="tab">▣ 30 Days</button>
+              </div>
+              <div class="expiry-table-actions"><label class="expiry-search"><span>⌕</span><input type="search"
+                    data-expiry-search placeholder="Search by medicine name, brand or batch..."
+                    aria-label="Search expiry alerts" /></label><button class="expiry-filter" type="button">⚱
+                  Filter⌄</button></div>
+            </div>
+            <div class="expiry-table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Medicine Name</th>
+                    <th>Brand</th>
+                    <th>Batch No.</th>
+                    <th>Expiry Date</th>
+                    <th>Days Left</th>
+                    <th>Status</th>
+                    <th><span class="sr-only">Actions</span></th>
+                  </tr>
+                </thead>
+                <tbody data-expiry-rows></tbody>
+              </table>
+            </div>
+            <footer class="expiry-table-footer"><span data-expiry-count>Showing 1–8 of 40 items</span>
+              <nav class="expiry-pagination" aria-label="Pagination"><button disabled>‹</button><button
+                  class="current">1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>›</button>
+              </nav>
+            </footer>
           </section>
 
-          <div class="expiry-workspace">
-            <section class="expiry-table-card" aria-label="Expiry alert list">
-              <div class="expiry-toolbar">
-                <div class="expiry-tabs" role="tablist" aria-label="Expiry filters">
-                  <button type="button" class="expiry-tab active" data-expiry-filter="all" role="tab">▦ All</button>
-                  <button type="button" class="expiry-tab" data-expiry-filter="expired" role="tab">⚠ Expired</button>
-                  <button type="button" class="expiry-tab" data-expiry-filter="week" role="tab">◷ 7 Days</button>
-                  <button type="button" class="expiry-tab" data-expiry-filter="month" role="tab">▣ 30 Days</button>
-                </div>
-                <div class="expiry-table-actions"><label class="expiry-search"><span>⌕</span><input type="search" data-expiry-search placeholder="Search by medicine name, brand or batch..." aria-label="Search expiry alerts" /></label><button class="expiry-filter" type="button">⚱ Filter⌄</button></div>
-              </div>
-              <div class="expiry-table-wrap">
-                <table>
-                  <thead><tr><th>Medicine Name</th><th>Brand</th><th>Batch No.</th><th>Expiry Date</th><th>Days Left</th><th>Status</th><th><span class="sr-only">Actions</span></th></tr></thead>
-                  <tbody data-expiry-rows></tbody>
-                </table>
-              </div>
-              <footer class="expiry-table-footer"><span data-expiry-count>Showing 1–8 of 40 items</span><nav class="expiry-pagination" aria-label="Pagination"><button disabled>‹</button><button class="current">1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>›</button></nav></footer>
+          <aside class="expiry-aside">
+            <section class="expiry-actions-card">
+              <h2>☼ Quick Actions</h2><a href="stock.html"><span>⊕</span> Add Medicine <b>›</b></a><a
+                href="stock.html"><span>▣</span> Update Stock <b>›</b></a><a href="#expiry-title"><span>♧</span> View
+                All Expiry Alerts <b>›</b></a><button type="button" data-expiry-report><span>▤</span> Generate Expiry
+                Report <b>›</b></button>
+              <p class="expiry-report-message" data-expiry-report-message hidden role="status">Your local expiry report
+                is ready to review.</p>
             </section>
+            <section class="expiry-tip">
+              <div class="expiry-tip-icon">◷</div>
+              <h2>Prevent losses<br />with timely action.</h2>
+              <p>Keep your stock fresh and your business running.</p>
+            </section>
+          </aside>
+        </div>
+        <footer class="expiry-footer">v1.0 <span>•</span> Local Data Storage</footer>
+      </section>
+    </main>
+  </div>
+  <script src="../../scripts/sidebar.js"></script>
+  <script src="../../scripts/auth.js"></script>
+  <script src="../../scripts/expiry.js"></script>
+  <script>document.querySelector(".mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("show"));</script>
+</body>
 
-            <aside class="expiry-aside">
-              <section class="expiry-actions-card"><h2>☼ Quick Actions</h2><a href="stock.html"><span>⊕</span> Add Medicine <b>›</b></a><a href="stock.html"><span>▣</span> Update Stock <b>›</b></a><a href="#expiry-title"><span>♧</span> View All Expiry Alerts <b>›</b></a><button type="button" data-expiry-report><span>▤</span> Generate Expiry Report <b>›</b></button><p class="expiry-report-message" data-expiry-report-message hidden role="status">Your local expiry report is ready to review.</p></section>
-              <section class="expiry-tip"><div class="expiry-tip-icon">◷</div><h2>Prevent losses<br />with timely action.</h2><p>Keep your stock fresh and your business running.</p></section>
-            </aside>
-          </div>
-          <footer class="expiry-footer">v1.0 <span>•</span> Local Data Storage</footer>
-        </section>
-      </main>
-    </div>
-    <script src="../../scripts/sidebar.js"></script>
-    <script src="../../scripts/auth.js"></script>
-    <script src="../../scripts/expiry.js"></script>
-    <script>document.querySelector(".mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("show"));</script>
-  </body>
 </html>

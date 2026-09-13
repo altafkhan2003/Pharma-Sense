@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -35,6 +36,7 @@
 
   --icon-size: 15px;
 }
+
 body {
   background-color: var(--background);
   display: flex;
@@ -42,11 +44,13 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+
 .box {
   width: 40%;
   margin: auto;
   padding: 25px;
 }
+
 .container {
   background: var(--surface);
   width: 100%;
@@ -60,6 +64,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
 }
+
 .one {
   width: 100%;
   display: flex;
@@ -69,19 +74,23 @@ body {
   /* flex-wrap: wrap; */
   margin-bottom: 15px;
 }
+
 .plus img {
   width: 60px;
   height: 60px;
 }
+
 .text h1 {
   font-size: 2rem;
   font-weight: 600;
 }
+
 .text p {
   font-size: 1.1rem;
   color: var(--primary-hover);
   font-weight: 300;
 }
+
 .two {
   width: 100%;
   display: flex;
@@ -91,18 +100,22 @@ body {
   gap: 3px;
   margin-bottom: 15px;
 }
+
 .two img {
   width: 70px;
   height: 70px;
 }
+
 .user {
   border: 1px solid transparent;
   border-radius: 50%;
   background-color: var(--primary-soft);
 }
+
 .two div {
   margin: 5px;
 }
+
 .welcomeback h1 {
   background: linear-gradient(90deg, #087f8c, #16a085);
   -webkit-background-clip: text;
@@ -112,6 +125,7 @@ body {
   font-size: 2.2em;
   /* color: #807c68; */
 }
+
 .description p {
   font-size: 1.4em;
   color: var(--primary-hover);
@@ -127,10 +141,12 @@ body {
   justify-content: center;
   gap: 10px;
 }
+
 .form img {
   width: 25px;
   height: 25px;
 }
+
 .form {
   width: 80%;
   border: 1px solid var(--border-light);
@@ -150,22 +166,26 @@ body {
     box-shadow 0.25s ease,
     /* transform 0.5s ease; */
 }
+
 .form input {
   outline: none;
   border: none;
   width: 100%;
   padding: 10px 5px;
 }
+
 .form input::placeholder {
   font-size: 18px;
   color: var(--text-light);
 }
+
 .form:hover {
   border-color: #0d8f74;
   box-shadow:
     0 0 0 3px rgba(13, 143, 116, 0.08),
     0 6px 16px rgba(13, 143, 116, 0.1);
 }
+
 .four {
   margin: 10px;
   width: 80%;
@@ -173,38 +193,45 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .four div {
   gap: 10px;
   display: flex;
   width: 50%;
 }
+
 .four a {
   text-decoration: none;
   color: var(--primary-hover);
 }
+
 .four a:hover {
   background: linear-gradient(45deg, pink, red, green, blue);
   background-clip: text;
   color: transparent;
   text-decoration: solid;
 }
+
 #eye {
   transition:
     color 0.25s ease,
     transform 0.25s ease,
     filter 0.25s ease;
 }
+
 #eye:hover {
   color: #0d8f74;
   transform: scale(1.15);
   filter: drop-shadow(0 0 3px rgba(13, 143, 116, 0.3));
 }
+
 .password-toggle {
   border: 0;
   background: transparent;
   cursor: pointer;
   display: inline-flex;
 }
+
 .submit-button {
   width: 80%;
   border: 0;
@@ -216,6 +243,17 @@ body {
   font-weight: 600;
   padding: 12px;
 }
-.submit-button:hover { background: var(--primary-hover); }
-.form-message { width: 80%; color: var(--danger); font-size: 0.9rem; }
-.form-message[data-kind="success"] { color: var(--primary-dark); }
+
+.submit-button:hover {
+  background: var(--primary-hover);
+}
+
+.form-message {
+  width: 80%;
+  color: var(--danger);
+  font-size: 0.9rem;
+}
+
+.form-message[data-kind="success"] {
+  color: var(--primary-dark);
+}

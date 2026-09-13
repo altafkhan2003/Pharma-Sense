@@ -1,88 +1,200 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pharma Sense stock management" />
-    <title>Pharma Sense - Stock Management</title>
-    <link rel="stylesheet" href="../../styles/dashboard.css" />
-    <link rel="stylesheet" href="../../styles/stock.css" />
-  </head>
-  <body data-page="dashboard" data-active-nav="stock">
-    <div class="app stock-app">
-      <aside class="sidebar" data-sidebar></aside>
 
-      <main class="main stock-main">
-        <header class="topbar stock-topbar">
-          <button class="mobile-menu" aria-label="Open menu">☰</button>
-          <div class="stock-top-actions">
-            <label class="search-box stock-global-search">
-              <span>⌕</span>
-              <input type="search" placeholder="Search medicines, brands, categories..." aria-label="Search medicines, brands, categories" />
-            </label>
-            <div class="top-profile">
-              <div class="avatar" data-user-initials>AK</div>
-              <div class="profile-text"><strong data-user-name>Altaf Khan</strong><small>Administrator</small></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pharma Sense stock management" />
+  <title>Pharma Sense - Stock Management</title>
+  <link rel="stylesheet" href="../../styles/dashboard.css" />
+  <link rel="stylesheet" href="../../styles/stock.css" />
+</head>
+
+<body data-page="dashboard" data-active-nav="stock">
+  <div class="app stock-app">
+    <aside class="sidebar" data-sidebar></aside>
+
+    <main class="main stock-main">
+      <header class="topbar stock-topbar">
+        <button class="mobile-menu" aria-label="Open menu">☰</button>
+        <div class="stock-top-actions">
+          <label class="search-box stock-global-search">
+            <span>⌕</span>
+            <input type="search" placeholder="Search medicines, brands, categories..."
+              aria-label="Search medicines, brands, categories" />
+          </label>
+          <div class="top-profile">
+            <div class="avatar" data-user-initials>AK</div>
+            <div class="profile-text"><strong data-user-name>Altaf Khan</strong><small>Administrator</small></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="stock-content" aria-labelledby="stock-title">
+        <div class="stock-heading">
+          <div class="stock-heading-copy">
+            <div class="stock-page-icon">▣</div>
+            <div>
+              <h1 id="stock-title">Stock Management</h1>
+              <p>Track and manage your medicine inventory in real time.</p>
             </div>
           </div>
-        </header>
+          <button type="button" class="primary-button inventory-add-button" data-open-inventory-modal>＋ Add
+            Medicine</button>
+        </div>
 
-        <section class="stock-content" aria-labelledby="stock-title">
-          <div class="stock-heading">
-            <div class="stock-heading-copy">
-              <div class="stock-page-icon">▣</div>
-              <div><h1 id="stock-title">Stock Management</h1><p>Track and manage your medicine inventory in real time.</p></div>
+        <div class="stock-summary" data-stock-summary>
+          <article class="stock-summary-card"><span class="summary-icon green">▰</span>
+            <div>
+              <p>Total Medicines</p><strong>1,524</strong><small>in stock</small>
             </div>
-            <button type="button" class="primary-button inventory-add-button" data-open-inventory-modal>＋ Add Medicine</button>
+          </article>
+          <article class="stock-summary-card"><span class="summary-icon teal">▣</span>
+            <div>
+              <p>Low Stock Items</p><strong class="danger">18</strong><small>need attention</small>
+            </div>
+          </article>
+          <article class="stock-summary-card"><span class="summary-icon orange">⚠</span>
+            <div>
+              <p>Expiring Soon</p><strong class="warning">32</strong><small>within 30 days</small>
+            </div>
+          </article>
+          <article class="stock-summary-card"><span class="summary-icon slate">⊘</span>
+            <div>
+              <p>Out of Stock</p><strong>6</strong><small>items</small>
+            </div>
+          </article>
+        </div>
+
+        <section class="stock-table-card" aria-label="Medicine inventory">
+          <div class="stock-toolbar">
+            <div class="stock-tabs" role="tablist" aria-label="Stock filters">
+              <button class="stock-tab active" type="button" role="tab" data-filter="all">⌕ All Medicines</button>
+              <button class="stock-tab" type="button" role="tab" data-filter="Low Stock">⚠ Low Stock</button>
+              <button class="stock-tab" type="button" role="tab" data-filter="Expiring Soon">◷ Expiring Soon</button>
+              <button class="stock-tab" type="button" role="tab" data-filter="Out of Stock">⊘ Out of Stock</button>
+            </div>
+            <div class="stock-table-actions">
+              <label class="stock-search"><span>⌕</span><input type="search" data-stock-search
+                  placeholder="Search by name, brand, or SKU..." aria-label="Search stock" /></label>
+              <button class="filter-button" type="button">⚱ Filter⌄</button>
+            </div>
           </div>
 
-          <div class="stock-summary" data-stock-summary>
-            <article class="stock-summary-card"><span class="summary-icon green">▰</span><div><p>Total Medicines</p><strong>1,524</strong><small>in stock</small></div></article>
-            <article class="stock-summary-card"><span class="summary-icon teal">▣</span><div><p>Low Stock Items</p><strong class="danger">18</strong><small>need attention</small></div></article>
-            <article class="stock-summary-card"><span class="summary-icon orange">⚠</span><div><p>Expiring Soon</p><strong class="warning">32</strong><small>within 30 days</small></div></article>
-            <article class="stock-summary-card"><span class="summary-icon slate">⊘</span><div><p>Out of Stock</p><strong>6</strong><small>items</small></div></article>
+          <div class="stock-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Medicine Name</th>
+                  <th>Brand</th>
+                  <th>Category</th>
+                  <th>Stock Qty</th>
+                  <th>Unit</th>
+                  <th>Expiry Date</th>
+                  <th>Status</th>
+                  <th><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody data-stock-rows>
+                <tr>
+                  <td><span class="medicine-dot green"></span>Paracetamol 500mg</td>
+                  <td>Crocin</td>
+                  <td>Pain Relief</td>
+                  <td>1,250</td>
+                  <td>Tablet</td>
+                  <td>Nov 2026</td>
+                  <td><span class="stock-status in-stock">● In Stock</span></td>
+                  <td><button class="row-action" aria-label="Edit Paracetamol 500mg">✎</button></td>
+                </tr>
+                <tr>
+                  <td><span class="medicine-dot blue"></span>Amoxicillin 500mg</td>
+                  <td>Amoxil</td>
+                  <td>Antibiotic</td>
+                  <td>985</td>
+                  <td>Capsule</td>
+                  <td>Feb 2026</td>
+                  <td><span class="stock-status in-stock">● In Stock</span></td>
+                  <td><button class="row-action" aria-label="Edit Amoxicillin 500mg">✎</button></td>
+                </tr>
+                <tr>
+                  <td><span class="medicine-dot blue"></span>Cetirizine 10mg</td>
+                  <td>Zyrtec</td>
+                  <td>Anti-Allergy</td>
+                  <td>780</td>
+                  <td>Tablet</td>
+                  <td>Jan 2027</td>
+                  <td><span class="stock-status in-stock">● In Stock</span></td>
+                  <td><button class="row-action" aria-label="Edit Cetirizine 10mg">✎</button></td>
+                </tr>
+                <tr>
+                  <td><span class="medicine-dot pink"></span>Pantoprazole 40mg</td>
+                  <td>Pantocid</td>
+                  <td>Gastrointestinal</td>
+                  <td>650</td>
+                  <td>Tablet</td>
+                  <td>Dec 2026</td>
+                  <td><span class="stock-status in-stock">● In Stock</span></td>
+                  <td><button class="row-action" aria-label="Edit Pantoprazole 40mg">✎</button></td>
+                </tr>
+                <tr>
+                  <td><span class="medicine-dot blue"></span>Azithromycin 250mg</td>
+                  <td>Azithral</td>
+                  <td>Antibiotic</td>
+                  <td>540</td>
+                  <td>Tablet</td>
+                  <td>Mar 2026</td>
+                  <td><span class="stock-status expiring">● Expiring Soon</span></td>
+                  <td><button class="row-action" aria-label="Edit Azithromycin 250mg">✎</button></td>
+                </tr>
+                <tr>
+                  <td><span class="medicine-dot green"></span>Metformin 500mg</td>
+                  <td>Gluformin</td>
+                  <td>Diabetes</td>
+                  <td>320</td>
+                  <td>Tablet</td>
+                  <td>Aug 2026</td>
+                  <td><span class="stock-status in-stock">● In Stock</span></td>
+                  <td><button class="row-action" aria-label="Edit Metformin 500mg">✎</button></td>
+                </tr>
+                <tr>
+                  <td><span class="medicine-dot yellow"></span>Ibuprofen 400mg</td>
+                  <td>Brufen</td>
+                  <td>Pain Relief</td>
+                  <td>120</td>
+                  <td>Tablet</td>
+                  <td>Jun 2026</td>
+                  <td><span class="stock-status low-stock">● Low Stock</span></td>
+                  <td><button class="row-action" aria-label="Edit Ibuprofen 400mg">✎</button></td>
+                </tr>
+                <tr>
+                  <td><span class="medicine-dot red"></span>Cough Syrup</td>
+                  <td>Benadryl</td>
+                  <td>Cough &amp; Cold</td>
+                  <td>0</td>
+                  <td>Bottle</td>
+                  <td>—</td>
+                  <td><span class="stock-status out-stock">● Out of Stock</span></td>
+                  <td><button class="row-action" aria-label="Edit Cough Syrup">✎</button></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-
-          <section class="stock-table-card" aria-label="Medicine inventory">
-            <div class="stock-toolbar">
-              <div class="stock-tabs" role="tablist" aria-label="Stock filters">
-                <button class="stock-tab active" type="button" role="tab" data-filter="all">⌕ All Medicines</button>
-                <button class="stock-tab" type="button" role="tab" data-filter="Low Stock">⚠ Low Stock</button>
-                <button class="stock-tab" type="button" role="tab" data-filter="Expiring Soon">◷ Expiring Soon</button>
-                <button class="stock-tab" type="button" role="tab" data-filter="Out of Stock">⊘ Out of Stock</button>
-              </div>
-              <div class="stock-table-actions">
-                <label class="stock-search"><span>⌕</span><input type="search" data-stock-search placeholder="Search by name, brand, or SKU..." aria-label="Search stock" /></label>
-                <button class="filter-button" type="button">⚱ Filter⌄</button>
-              </div>
-            </div>
-
-            <div class="stock-table-wrap">
-              <table>
-                <thead><tr><th>Medicine Name</th><th>Brand</th><th>Category</th><th>Stock Qty</th><th>Unit</th><th>Expiry Date</th><th>Status</th><th><span class="sr-only">Actions</span></th></tr></thead>
-                <tbody data-stock-rows>
-                  <tr><td><span class="medicine-dot green"></span>Paracetamol 500mg</td><td>Crocin</td><td>Pain Relief</td><td>1,250</td><td>Tablet</td><td>Nov 2026</td><td><span class="stock-status in-stock">● In Stock</span></td><td><button class="row-action" aria-label="Edit Paracetamol 500mg">✎</button></td></tr>
-                  <tr><td><span class="medicine-dot blue"></span>Amoxicillin 500mg</td><td>Amoxil</td><td>Antibiotic</td><td>985</td><td>Capsule</td><td>Feb 2026</td><td><span class="stock-status in-stock">● In Stock</span></td><td><button class="row-action" aria-label="Edit Amoxicillin 500mg">✎</button></td></tr>
-                  <tr><td><span class="medicine-dot blue"></span>Cetirizine 10mg</td><td>Zyrtec</td><td>Anti-Allergy</td><td>780</td><td>Tablet</td><td>Jan 2027</td><td><span class="stock-status in-stock">● In Stock</span></td><td><button class="row-action" aria-label="Edit Cetirizine 10mg">✎</button></td></tr>
-                  <tr><td><span class="medicine-dot pink"></span>Pantoprazole 40mg</td><td>Pantocid</td><td>Gastrointestinal</td><td>650</td><td>Tablet</td><td>Dec 2026</td><td><span class="stock-status in-stock">● In Stock</span></td><td><button class="row-action" aria-label="Edit Pantoprazole 40mg">✎</button></td></tr>
-                  <tr><td><span class="medicine-dot blue"></span>Azithromycin 250mg</td><td>Azithral</td><td>Antibiotic</td><td>540</td><td>Tablet</td><td>Mar 2026</td><td><span class="stock-status expiring">● Expiring Soon</span></td><td><button class="row-action" aria-label="Edit Azithromycin 250mg">✎</button></td></tr>
-                  <tr><td><span class="medicine-dot green"></span>Metformin 500mg</td><td>Gluformin</td><td>Diabetes</td><td>320</td><td>Tablet</td><td>Aug 2026</td><td><span class="stock-status in-stock">● In Stock</span></td><td><button class="row-action" aria-label="Edit Metformin 500mg">✎</button></td></tr>
-                  <tr><td><span class="medicine-dot yellow"></span>Ibuprofen 400mg</td><td>Brufen</td><td>Pain Relief</td><td>120</td><td>Tablet</td><td>Jun 2026</td><td><span class="stock-status low-stock">● Low Stock</span></td><td><button class="row-action" aria-label="Edit Ibuprofen 400mg">✎</button></td></tr>
-                  <tr><td><span class="medicine-dot red"></span>Cough Syrup</td><td>Benadryl</td><td>Cough &amp; Cold</td><td>0</td><td>Bottle</td><td>—</td><td><span class="stock-status out-stock">● Out of Stock</span></td><td><button class="row-action" aria-label="Edit Cough Syrup">✎</button></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <footer class="stock-table-footer"><span data-stock-count>Showing 1–8 of 1,524 medicines</span><nav class="pagination" aria-label="Pagination"><button disabled>‹</button><button class="current">1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>›</button></nav></footer>
-          </section>
-          <footer class="stock-footer">v1.0 <span>•</span> Local Data Storage</footer>
+          <footer class="stock-table-footer"><span data-stock-count>Showing 1–8 of 1,524 medicines</span>
+            <nav class="pagination" aria-label="Pagination"><button disabled>‹</button><button
+                class="current">1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>›</button>
+            </nav>
+          </footer>
         </section>
-      </main>
-    </div>
-    <script src="../../scripts/sidebar.js"></script>
-    <script src="../../scripts/auth.js"></script>
-    <script src="../../scripts/inventory.js"></script>
-    <script>
-      document.querySelector(".mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("show"));
-    </script>
-  </body>
+        <footer class="stock-footer">v1.0 <span>•</span> Local Data Storage</footer>
+      </section>
+    </main>
+  </div>
+  <script src="../../scripts/sidebar.js"></script>
+  <script src="../../scripts/auth.js"></script>
+  <script src="../../scripts/inventory.js"></script>
+  <script>
+    document.querySelector(".mobile-menu").addEventListener("click", () => document.querySelector(".sidebar").classList.toggle("show"));
+  </script>
+</body>
+
 </html>

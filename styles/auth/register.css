@@ -6,23 +6,30 @@
   box-sizing: border-box;
   font-family: var(--font-family);
 }
+
 :root {
-  --primary: #0d836b; /* Main Pharma Sense green */
+  --primary: #0d836b;
+  /* Main Pharma Sense green */
   --primary-hover: #0e9e81;
   --primary-soft: #e8f6f2;
 
-  --text: #2c3447; /* Main heading/text */
-  --text-muted: #7a808b; /* Labels / secondary text */
+  --text: #2c3447;
+  /* Main heading/text */
+  --text-muted: #7a808b;
+  /* Labels / secondary text */
   --text-subtle: #a4a6ad;
 
-  --page-bg: #f8f8f8; /* Outside background */
+  --page-bg: #f8f8f8;
+  /* Outside background */
   --card-bg: #ffffff;
   --input-bg: #ffffff;
 
-  --border: #e6e7ea; /* Input borders */
+  --border: #e6e7ea;
+  /* Input borders */
   --border-strong: #d8dadf;
 
-  --danger: #e0525d; /* Required * */
+  --danger: #e0525d;
+  /* Required * */
 
   --white: #ffffff;
 
@@ -32,13 +39,16 @@
 
   --font-family: Inter, "Segoe UI", Arial, sans-serif;
 }
+
 h1 {
   font-size: 1.5rem;
 }
+
 body {
   padding: 20px 150px;
   background-color: var(--page-bg);
 }
+
 .container {
   width: 40%;
   /* height: 87vh; */
@@ -53,6 +63,7 @@ body {
   gap: 2px;
   transition: all 0.2s ease;
 }
+
 .container:hover {
   box-shadow: var(--shadow-card);
   transform: translateY(-5px);
@@ -62,6 +73,7 @@ body {
     0 16px 30px rgba(202, 117, 117, 0.356),
     0 25px 50px rgba(172, 35, 137, 0.295);
 }
+
 .title {
   width: 100%;
   display: flex;
@@ -72,16 +84,20 @@ body {
   flex-wrap: wrap;
   margin: 5px 0;
 }
+
 .title img {
   width: auto;
 }
+
 .title span h1 {
   padding: 2px;
   color: var(--text);
 }
+
 .pharma p {
   color: var(--text-muted);
 }
+
 .circle {
   display: flex;
   justify-content: center;
@@ -89,6 +105,7 @@ body {
   padding: 10px 0 0 0;
   margin: 5px 0;
 }
+
 .circle .active {
   width: 40px;
   height: 40px;
@@ -103,18 +120,22 @@ body {
   font-size: 12px;
   font-weight: 600;
 }
+
 .two {
   background: var(--page-bg);
 }
+
 .one {
   background-color: var(--primary-hover);
   color: white;
 }
+
 .line {
   width: 60px;
   height: 3px;
   background: var(--border-strong);
 }
+
 .account {
   display: flex;
   flex-direction: column;
@@ -122,11 +143,13 @@ body {
   gap: 3px;
   margin: 10px 0;
 }
+
 .account h1 {
   font-weight: 700;
   font-size: 1.7em;
   color: var(--text);
 }
+
 .account p {
   font-weight: 300;
   color: var(--text-muted);
@@ -141,20 +164,23 @@ body {
   gap: 10px;
   border-radius: var(--radius-input);
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
-   
+
 }
-.Owner-name:hover{
+
+.Owner-name:hover {
   border-color: #0d8f74;
   box-shadow:
     0 0 0 3px rgba(13, 143, 116, 0.08),
     0 6px 16px rgba(13, 143, 116, 0.1);
 
 }
+
 .Owner-name img {
   width: 25px;
   height: 25px;
   padding-right: 1px;
 }
+
 .Owner-name input {
   border: none;
   font-size: 1.2em;
@@ -162,6 +188,7 @@ body {
   padding: 12px;
   outline: none;
 }
+
 .register {
   width: 100%;
 
@@ -175,39 +202,52 @@ body {
   border: none;
   padding: 15px;
 }
+
 .left {
   display: flex;
   align-items: center;
 }
-.right img{
+
+.right img {
   transition: all 0.25s ease;
 
 }
-.right img:hover{
+
+.right img:hover {
   color: #0d8f74;
   transform: scale(1.05);
-  filter: drop-shadow(0 0 3px rgba(13 , 143, 116,0.3));
+  filter: drop-shadow(0 0 3px rgba(13, 143, 116, 0.3));
 }
+
 .phone {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .right {
   padding-right: 8px;
   color: var(--text-muted);
 }
+
 .right img {
   height: 30px;
   width: 30px;
 }
+
 .password-toggle {
   background: transparent;
   border: 0;
   cursor: pointer;
   display: inline-flex;
 }
-.form-message { color: var(--danger); font-size: 0.9rem; padding: 0 20px; }
+
+.form-message {
+  color: var(--danger);
+  font-size: 0.9rem;
+  padding: 0 20px;
+}
+
 .button {
   width: 95%;
   /* margin: auto; */
@@ -216,6 +256,7 @@ body {
   border-radius: var(--radius-card);
   overflow: hidden;
 }
+
 .button button {
   background: var(--primary);
   width: 100%;
@@ -224,10 +265,11 @@ body {
   color: white;
   font-size: 1.2em;
   /* transition: all 0.2s linear; */
-  
+
   transition: all 0.2s ease;
   box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
 }
+
 .button button:hover {
   transform: translateY(-2px);
   scale: 1.02;
@@ -236,12 +278,14 @@ body {
     0 8px 20px rgba(13, 110, 253, 0.3),
     0 0 0 4px rgba(13, 110, 253, 0.08);
 }
+
 .already {
   display: flex;
   gap: 8px;
   align-items: center;
   margin: 10px 0;
 }
+
 .already a {
   text-decoration: none;
   margin: 5px;
