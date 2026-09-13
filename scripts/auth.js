@@ -106,6 +106,90 @@
       );
       window.location.href = "../app/dashboard.html";
     });
+
+    setUpPasswordRecovery();
+  }
+
+  function setUpPasswordRecovery() {
+    const modal = document.querySelector("[data-recovery-modal]");
+    const trigger = document.querySelector("[data-open-recovery]");
+    if (!modal || !trigger) return;
+
+    const form = modal.querySelector("[data-recovery-form]");
+    const email = form.elements.recoveryEmail;
+    const otp = form.elements.recoveryOtp;
+    const emailLabel = modal.querySelector("[data-recovery-email-label]");
+    const otpLabel = modal.querySelector("[data-recovery-otp-label]");
+    const description = modal.querySelector("[data-recovery-copy]");
+    const send = modal.querySelector("[data-recovery-send]");
+    const message = modal.querySelector("[data-recovery-message]");
+    let otpStep = false;
+
+    const reset = () => {
+      otpStep = false;
+      form.reset();
+      email.hidden = false;
+      emailLabel.hidden = false;
+      otp.hidden = true;
+      otpLabel.hidden = true;
+      description.textContent =
+        "Enter your registered email to continue to the OTP step.";
+      send.textContent = "Send";
+      message.hidden = true;
+    };
+    const close = () => {
+      modal.hidden = true;
+      document.body.classList.remove("modal-open");
+      trigger.focus();
+      reset();
+    };
+    const open = () => {
+      modal.hidden = false;
+      document.body.classList.add("modal-open");
+      email.focus();
+    };
+
+    trigger.addEventListener("click", open);
+    modal
+      .querySelectorAll("[data-close-recovery]")
+      .forEach((button) => button.addEventListener("click", close));
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !modal.hidden) close();
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!otpStep) {
+        if (!email.validity.valid) {
+          message.textContent = "Enter a valid registered email address.";
+          message.hidden = false;
+          email.focus();
+          return;
+        }
+        otpStep = true;
+        email.hidden = true;
+        emailLabel.hidden = true;
+        otp.hidden = false;
+        otpLabel.hidden = false;
+        description.textContent = `Enter the OTP for ${email.value.trim()}. No email is sent in this local preview.`;
+        send.textContent = "Done";
+        message.hidden = true;
+        otp.focus();
+        return;
+      }
+      if (!otp.value.trim()) {
+        message.textContent = "Enter the OTP to continue.";
+        message.hidden = false;
+        otp.focus();
+        return;
+      }
+      message.textContent =
+        "OTP entry is shown for preview only; no verification is performed.";
+      message.hidden = false;
+    });
   }
 
   function setUpDashboard() {

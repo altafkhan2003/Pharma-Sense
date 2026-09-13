@@ -46,7 +46,6 @@ body {
 }
 
 .box {
-  width: 40%;
   margin: auto;
   padding: 25px;
 }
@@ -200,6 +199,99 @@ body {
   width: 50%;
 }
 
+.forgot-password {
+  border: 0;
+  padding: 0;
+  color: var(--primary-hover);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.forgot-password:hover,
+.forgot-password:focus-visible {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Password recovery */
+.recovery-backdrop {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(19, 35, 59, 0.38);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.recovery-backdrop[hidden] {
+  display: none;
+}
+
+.recovery-modal {
+  position: relative;
+  width: min(430px, 100%);
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 14px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20px 55px rgba(18, 35, 58, 0.24);
+}
+
+.recovery-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 31px;
+  height: 31px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  background: #eef4f2;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.recovery-close:hover { color: var(--primary-dark); background: var(--primary-soft); }
+
+.recovery-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  color: var(--primary);
+  background: var(--primary-soft);
+  font-size: 21px;
+}
+
+.recovery-modal h2 { font-size: 1.38rem; }
+.recovery-modal > p { margin: 8px 0 21px; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.5; }
+.recovery-modal form { display: grid; gap: 8px; }
+.recovery-modal label { color: var(--text-secondary); font-size: 0.82rem; font-weight: 600; }
+.recovery-modal input { width: 100%; min-height: 45px; border: 1px solid var(--border); border-radius: var(--radius-input); padding: 0 12px; color: var(--text); background: #fff; font-size: 0.95rem; outline: none; }
+.recovery-modal input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(13, 143, 116, 0.12); }
+.recovery-modal input::placeholder { color: var(--text-light); }
+.recovery-message { margin-top: 3px; color: var(--danger); font-size: 0.8rem; }
+.recovery-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+.recovery-actions button { border-radius: var(--radius-button); padding: 10px 17px; font-size: 0.88rem; font-weight: 600; cursor: pointer; }
+.recovery-cancel { border: 1px solid var(--border); color: var(--text-secondary); background: #fff; }.recovery-cancel:hover { background: #f5f7f7; }
+.recovery-send { border: 1px solid var(--primary); color: #fff; background: var(--primary); }.recovery-send:hover { background: var(--primary-hover); }
+
+body.modal-open { overflow: hidden; }
+
+@media (max-width: 480px) {
+  .recovery-modal { padding: 26px 20px 20px; }
+  .recovery-actions button { flex: 1; }
+}
+
 .four a {
   text-decoration: none;
   color: var(--primary-hover);
@@ -256,4 +348,16 @@ body {
 
 .form-message[data-kind="success"] {
   color: var(--primary-dark);
+}
+
+.already {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.already a {
+  text-decoration: none;
+  margin: 5px;
 }

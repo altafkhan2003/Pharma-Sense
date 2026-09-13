@@ -51,20 +51,45 @@
             <input type="checkbox" name="Remember Me" id="Remember Me">
             <p>Remember Me</p>
           </div>
-          <a href="#">Forget Password?</a>
+          <button type="button" class="forgot-password" data-open-recovery>Forgot Password?</button>
         </div>
 
         <p class="form-message" data-form-message role="alert" hidden></p>
         <button class="submit-button" type="submit">Login to Dashboard</button>
 
-
       </form>
 
+      <div class="already">
+        <p>Don't have an account?</p>
+        <a href="register.html">Register</a>
+      </div>
 
     </div>
 
   </div>
 
+  <div class="recovery-backdrop" data-recovery-modal hidden>
+    <section class="recovery-modal" role="dialog" aria-modal="true" aria-labelledby="recovery-title"
+      aria-describedby="recovery-description">
+      <button type="button" class="recovery-close" data-close-recovery aria-label="Close password recovery">×</button>
+      <div class="recovery-icon" aria-hidden="true">✉</div>
+      <h2 id="recovery-title">Reset your password</h2>
+      <p id="recovery-description" data-recovery-copy>Enter your registered email to continue to the OTP step.</p>
+      <form data-recovery-form novalidate>
+        <label for="recovery-email" data-recovery-email-label>Registered email</label>
+        <input id="recovery-email" name="recoveryEmail" type="email" autocomplete="email"
+          placeholder="Enter your registered email" required />
+        <label for="recovery-otp" data-recovery-otp-label hidden>Enter OTP</label>
+        <input id="recovery-otp" name="recoveryOtp" type="text" inputmode="numeric" autocomplete="one-time-code"
+          placeholder="Enter OTP" maxlength="6" hidden />
+        <p class="recovery-message" data-recovery-message role="alert" hidden></p>
+        <div class="recovery-actions">
+          <button type="button" class="recovery-cancel" data-close-recovery>Cancel</button>
+          <button type="submit" class="recovery-send" data-recovery-send>Send</button>
+        </div>
+      </form>
+    </section>
+  </div>
 
 
 
